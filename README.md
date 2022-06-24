@@ -1,0 +1,2 @@
+# OpenResource
+My Resource Location
