@@ -1,3 +1,6 @@
+
+首頁 : [Web Site](https://tobytoy.github.io/OpenResource/)
+
 # 紀錄動機
 
 學習是一件神奇的事，當年紀漸長，看到的會越來越多，因此想要開始著手紀錄我所知道的，有緣人請參考學習。
