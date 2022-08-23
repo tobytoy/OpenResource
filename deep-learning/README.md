@@ -28,6 +28,10 @@ pytorch 是 facebook 維護，tensorflow 是 google 維護。
 - 香港中文大學 的 [mmdetection](https://github.com/open-mmlab/mmdetection) ， [openmmlab](https://openmmlab.com/)
 - 百度飛槳 [Paddle](https://github.com/PaddlePaddle/Paddle)
 - [fastai](https://docs.fast.ai/)
+- [mediapipe](https://github.com/google/mediapipe)
+- intel 的 [openvino](https://github.com/openvinotoolkit/openvino)
+- [onnx](https://onnxruntime.ai/)
+- Apache 的 [MXNet](https://cv.gluon.ai/tutorials/index.html)
 
 ## 優化調適模型
 

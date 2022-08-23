@@ -7,7 +7,6 @@
 - 統計 : [Statistics](https://tobytoy.github.io/OpenResource/statistics/)
 - 基礎統計 : [Basic Statistics Knowledge](https://tobytoy.github.io/OpenResource/statistics/基礎統計(basic)/)
 - 深度學習 : [Deep Learning](https://tobytoy.github.io/OpenResource/deep-learning/)
-- test : [Basic Statistics Knowledge](https://tobytoy.github.io/OpenResource/statistics/基礎統計(basic)/test.md)
 
 # 紀錄動機
 
