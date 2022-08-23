@@ -27,6 +27,7 @@ pytorch 是 facebook 維護，tensorflow 是 google 維護。
 - facebook 的 [detectron2](https://github.com/facebookresearch/detectron2)
 - 香港中文大學 的 [mmdetection](https://github.com/open-mmlab/mmdetection) ， [openmmlab](https://openmmlab.com/)
 - 百度飛槳 [Paddle](https://github.com/PaddlePaddle/Paddle)
+- [fastai](https://docs.fast.ai/)
 
 ## 優化調適模型
 
