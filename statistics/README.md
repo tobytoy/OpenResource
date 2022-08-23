@@ -11,3 +11,4 @@
 # 其他參考資料
 
 -[central moment](https://zh.wikipedia.org/zh-tw/%E4%B8%AD%E5%BF%83%E7%9F%A9)
+-[python-in-learning](https://ntpuccw.blog/python-in-learning/)
