@@ -1,6 +1,6 @@
 
 - 首頁 : [Web Site](https://tobytoy.github.io/OpenResource/)
-- 推薦的學習路線 : [Learning Path](https://tobytoy.github.io/OpenResource/machine-learning(scikit-learn)/jupyter/簡介(Introduction)/learning_paths)
+- 推薦的學習路線 : [Learning Path](https://tobytoy.github.io/OpenResource/machine-learning(scikit-learn)/jupyter/%E7%B0%A1%E4%BB%8B(Introduction)/learning_paths)
 
 # 紀錄動機
 
