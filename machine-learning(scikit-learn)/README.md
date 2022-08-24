@@ -23,3 +23,4 @@
 
 - [The Optimality of Naive Bayes](https://www.cs.unb.ca/~hzhang/publications/FLAIRS04ZhangH.pdf)
 - [Bayesian Regression](https://www.jiqizhixin.com/articles/2018-04-25-3)
+- [快思慢想](https://zh.m.wikipedia.org/zh-tw/%E5%BF%AB%E6%80%9D%E6%85%A2%E6%83%B3)
