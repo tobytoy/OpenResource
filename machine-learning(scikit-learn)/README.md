@@ -16,11 +16,22 @@
 - [Kaggle](https://www.kaggle.com/learn)
 - [approachingalmost](https://github.com/abhishekkrthakur/approachingalmost)
 - [全民瘋AI](https://ithelp.ithome.com.tw/users/20107247/ironman/4723)
+- [Python 機器學習](https://www.books.com.tw/products/0010797010)
+- [Deep learning 深度學習必讀](https://www.flag.com.tw/books/product/F9379)
 
 # 其他參考資料
 
-## Bayesian
+## History 歷史
+
+- [完整解析AI人工智慧](https://dahetalk.com/2018/04/08/%E5%AE%8C%E6%95%B4%E8%A7%A3%E6%9E%90ai%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%EF%BC%9A3%E5%A4%A7%E6%B5%AA%E6%BD%AE%EF%BC%8B3%E5%A4%A7%E6%8A%80%E8%A1%93%EF%BC%8B3%E5%A4%A7%E6%87%89%E7%94%A8%EF%BD%9C/)
+
+## Bayesian 貝氏
 
 - [The Optimality of Naive Bayes](https://www.cs.unb.ca/~hzhang/publications/FLAIRS04ZhangH.pdf)
 - [Bayesian Regression](https://www.jiqizhixin.com/articles/2018-04-25-3)
 - [快思慢想](https://zh.m.wikipedia.org/zh-tw/%E5%BF%AB%E6%80%9D%E6%85%A2%E6%83%B3)
+
+
+
+
+
