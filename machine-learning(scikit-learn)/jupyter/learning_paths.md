@@ -6,8 +6,9 @@
 ## 入門
 
 - 簡介 [Introduction](https://github.com/tobytoy/OpenResource/blob/main/machine-learning(scikit-learn)/jupyter/%E7%B0%A1%E4%BB%8B(Introduction)/01-01%20Introduction.ipynb)
+- 人工智慧歷史 [History](https://github.com/tobytoy/OpenResource/blob/main/machine-learning(scikit-learn)/jupyter/%E7%B0%A1%E4%BB%8B(Introduction)/)
 - 第一戰 [First Try](https://github.com/tobytoy/OpenResource/blob/main/machine-learning(scikit-learn)/jupyter/%E7%B0%A1%E4%BB%8B(Introduction)/01-02%20First_Try.ipynb)
-- scikit learn 提供的[玩具資料集](https://github.com/tobytoy/OpenResource/blob/main/machine-learning(scikit-learn)/jupyter/%E8%B3%87%E6%96%99%E9%9B%86(datasets)/01_03%20Toy-datasets.ipynb)
+- scikit learn 提供的[玩具資料集](https://github.com/tobytoy/OpenResource/blob/main/machine-learning(scikit-learn)/jupyter/%E8%B3%87%E6%96%99%E9%9B%86(datasets)/01-03%20Toy-datasets.ipynb)
 
 ## 線性模型基礎
 
