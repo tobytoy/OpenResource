@@ -33,3 +33,8 @@
 
 - 支持向量機 [SVM](https://github.com/tobytoy/OpenResource/blob/main/machine-learning(scikit-learn)/jupyter/%E5%9F%BA%E6%9C%AC%E6%A8%A1%E5%9E%8B(basic-model)/%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%A9%9F(SVM)/04_01%20Support_Vector_Machines.ipynb)
 
+## SGD
+
+- [SGD](https://github.com/tobytoy/OpenResource/blob/main/machine-learning(scikit-learn)/jupyter/%E5%9F%BA%E6%9C%AC%E6%A8%A1%E5%9E%8B(basic-model)/%E9%9A%A8%E6%A9%9F%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D(stochastic-gradient-descent)/05_01%20Stochastic_Gradient_Descent.ipynb)
+
+
