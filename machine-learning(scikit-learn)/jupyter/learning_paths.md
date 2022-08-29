@@ -7,7 +7,7 @@
 
 - 簡介 [Introduction](https://github.com/tobytoy/OpenResource/blob/main/machine-learning(scikit-learn)/jupyter/%E7%B0%A1%E4%BB%8B(Introduction)/01-01%20Introduction.ipynb)
 - 人工智慧歷史 [History](https://tobytoy.github.io/OpenResource/blob/main/machine-learning(scikit-learn)/jupyter/%E7%B0%A1%E4%BB%8B(Introduction)/)
-- 第一戰 [First Try](https://github.com/tobytoy/OpenResource/blob/main/machine-learning(scikit-learn)/jupyter/%E7%B0%A1%E4%BB%8B(Introduction)/01-02%20First_Try)
+- 第一戰 [First Try](https://github.com/tobytoy/OpenResource/machine-learning(scikit-learn)/jupyter/%E7%B0%A1%E4%BB%8B(Introduction)/01-02%20First_Try)
 - scikit learn 提供的[玩具資料集](https://github.com/tobytoy/OpenResource/blob/main/machine-learning(scikit-learn)/jupyter/%E8%B3%87%E6%96%99%E9%9B%86(datasets)/01-03%20Toy-datasets.ipynb)
 - scikit learn 提供的[生成資料集](https://github.com/tobytoy/OpenResource/blob/main/machine-learning(scikit-learn)/jupyter/%E8%B3%87%E6%96%99%E9%9B%86(datasets)/01-04%20Generated-Datasets.ipynb)
 
@@ -20,10 +20,10 @@
 
 ## 基本工具
 
-- Python 的 Excel [Pandas](https://tobytoy.github.io/OpenResource/blob/main/machine-learning(scikit-learn)/jupyter/%E5%85%B6%E4%BB%96%E5%B7%A5%E5%85%B7(other-tools)/00-01%20(Appendex)%20Pandas)
-- Python 的視覺化 [Matplotlib](https://tobytoy.github.io/OpenResource/blob/main/machine-learning(scikit-learn)/jupyter/%E5%85%B6%E4%BB%96%E5%B7%A5%E5%85%B7(other-tools)/00-02%20(Appendex)%20Visualization)
-- Python 的高階視覺化 [Seabon](https://tobytoy.github.io/OpenResource/blob/main/machine-learning(scikit-learn)/jupyter/%E5%85%B6%E4%BB%96%E5%B7%A5%E5%85%B7(other-tools)/00-03%20(Appendex)%20seabon)
-- 存檔讀檔 [Save_Load](https://tobytoy.github.io/OpenResource/blob/main/machine-learning(scikit-learn)/jupyter/%E5%85%B6%E4%BB%96%E5%B7%A5%E5%85%B7(other-tools)/00-04%20(Appendex)%20Save_Load)
+- Python 的 Excel [Pandas](https://tobytoy.github.io/OpenResource/machine-learning(scikit-learn)/jupyter/%E5%85%B6%E4%BB%96%E5%B7%A5%E5%85%B7(other-tools)/00-01%20(Appendex)%20Pandas)
+- Python 的視覺化 [Matplotlib](https://tobytoy.github.io/OpenResource/machine-learning(scikit-learn)/jupyter/%E5%85%B6%E4%BB%96%E5%B7%A5%E5%85%B7(other-tools)/00-02%20(Appendex)%20Visualization)
+- Python 的高階視覺化 [Seabon](https://tobytoy.github.io/OpenResource/machine-learning(scikit-learn)/jupyter/%E5%85%B6%E4%BB%96%E5%B7%A5%E5%85%B7(other-tools)/00-03%20(Appendex)%20seabon)
+- 存檔讀檔 [Save_Load](https://tobytoy.github.io/OpenResource/machine-learning(scikit-learn)/jupyter/%E5%85%B6%E4%BB%96%E5%B7%A5%E5%85%B7(other-tools)/00-04%20(Appendex)%20Save_Load)
 
 ## 簡易貝氏
 
