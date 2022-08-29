@@ -163,6 +163,14 @@ for flag in y == 2:
         count += 1
 
 print('答對 ', count, '題，準確率: ', count/len(y))
+
+# 以後會教的比較高級 baseline model 使用方法
+from sklearn.dummy import DummyClassifier
+baseline_model = DummyClassifier(strategy='constant', constant=1, random_state=87)
+baseline_model.fit(X, y)
+
+baseline_model.score(X, y)
+
 ```
 
 我們先來切分資料
