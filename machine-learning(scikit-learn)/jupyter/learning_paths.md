@@ -13,10 +13,10 @@
 
 ## 線性模型基礎
 
-- 線性模型 [Linear Regression](https://github.com/tobytoy/OpenResource/blob/main/machine-learning(scikit-learn)/jupyter/%E5%9F%BA%E6%9C%AC%E6%A8%A1%E5%9E%8B(basic-model)/%E7%B7%9A%E6%80%A7%E6%A8%A1%E5%9E%8B(Linear)/02_01%20Linear_Regression.ipynb)
-- 線性模型(多項式) [Polynomial](https://github.com/tobytoy/OpenResource/blob/main/machine-learning(scikit-learn)/jupyter/%E5%9F%BA%E6%9C%AC%E6%A8%A1%E5%9E%8B(basic-model)/%E7%B7%9A%E6%80%A7%E6%A8%A1%E5%9E%8B(Linear)/02_02%20Linear_Regression_Polynomial.ipynb)
-- 線性模型(貝氏) [Bayesian](https://github.com/tobytoy/OpenResource/blob/main/machine-learning(scikit-learn)/jupyter/%E5%9F%BA%E6%9C%AC%E6%A8%A1%E5%9E%8B(basic-model)/%E7%B7%9A%E6%80%A7%E6%A8%A1%E5%9E%8B(Linear)/02_03%20Linear_Regression_Bayesian.ipynb)
-- 線性模型(邏輯回歸) [Logistic](https://github.com/tobytoy/OpenResource/blob/main/machine-learning(scikit-learn)/jupyter/%E5%9F%BA%E6%9C%AC%E6%A8%A1%E5%9E%8B(basic-model)/%E7%B7%9A%E6%80%A7%E6%A8%A1%E5%9E%8B(Linear)/02_04%20Linear_Regression_Logistic.ipynb)
+- 線性模型 [Linear Regression](https://tobytoy.github.io/OpenResource/machine-learning(scikit-learn)/jupyter/%E5%9F%BA%E6%9C%AC%E6%A8%A1%E5%9E%8B(basic-model)/%E7%B7%9A%E6%80%A7%E6%A8%A1%E5%9E%8B(Linear)/02_01%20Linear_Regression)
+- 線性模型(多項式) [Polynomial](https://tobytoy.github.io/OpenResource//machine-learning(scikit-learn)/jupyter/%E5%9F%BA%E6%9C%AC%E6%A8%A1%E5%9E%8B(basic-model)/%E7%B7%9A%E6%80%A7%E6%A8%A1%E5%9E%8B(Linear)/02_02%20Linear_Regression_Polynomial)
+- 線性模型(貝氏) [Bayesian](https://tobytoy.github.io/OpenResource/machine-learning(scikit-learn)/jupyter/%E5%9F%BA%E6%9C%AC%E6%A8%A1%E5%9E%8B(basic-model)/%E7%B7%9A%E6%80%A7%E6%A8%A1%E5%9E%8B(Linear)/02_03%20Linear_Regression_Bayesian)
+- 線性模型(邏輯回歸) [Logistic](https://tobytoy.github.io/OpenResource/machine-learning(scikit-learn)/jupyter/%E5%9F%BA%E6%9C%AC%E6%A8%A1%E5%9E%8B(basic-model)/%E7%B7%9A%E6%80%A7%E6%A8%A1%E5%9E%8B(Linear)/02_04%20Linear_Regression_Logistic)
 
 ## 基本工具
 
