@@ -15,6 +15,7 @@
 - [Python Data Science Handbook](https://colab.research.google.com/github/jakevdp/PythonDataScienceHandbook/blob/master/notebooks/Index.ipynb)
 - [Kaggle](https://www.kaggle.com/learn)
 - [approachingalmost](https://github.com/abhishekkrthakur/approachingalmost)
+- [machine learning notes](https://github.com/roboticcam/machine-learning-notes)
 - [全民瘋AI](https://ithelp.ithome.com.tw/users/20107247/ironman/4723)
 - [Python 機器學習](https://www.books.com.tw/products/0010797010)
 - [Deep learning 深度學習必讀](https://www.flag.com.tw/books/product/F9379)
