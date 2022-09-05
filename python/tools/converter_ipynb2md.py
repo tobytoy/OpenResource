@@ -79,8 +79,11 @@ path_dictionary = dict()
 path_dictionary['root'] = Path('../../machine-learning(scikit-learn)/jupyter/基本模型(basic-model)/支持向量機(SVM)/')
 path_dictionary['list'] = [
                 '04_01 Support_Vector_Machines.ipynb',
+                '04_02 SVM_Kernel_Trick.ipynb',
                 ]
 path_dictionary_list.append(path_dictionary)
+
+
 
 
 # 基本模型 的 SGD
@@ -106,9 +109,9 @@ path_dictionary = dict()
 path_dictionary['root'] = Path('../../machine-learning(scikit-learn)/jupyter/評價指標(metrics)/')
 path_dictionary['list'] = [
                 'introduce.ipynb',
+                'metrics_classification.ipynb',
                 ]
 path_dictionary_list.append(path_dictionary)
-
 
 
 

@@ -36,11 +36,13 @@
 ## SVM 支持向量機
 
 - 支持向量機 [SVM](%E5%9F%BA%E6%9C%AC%E6%A8%A1%E5%9E%8B(basic-model)/%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%A9%9F(SVM)/04_01%20Support_Vector_Machines)
+- 核函數 [kernel](%E5%9F%BA%E6%9C%AC%E6%A8%A1%E5%9E%8B(basic-model)/%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%A9%9F(SVM)/04_02%20SVM_Kernel_Trick)
+
 
 ## 評價指標
 
 - metrices [簡介](%E8%A9%95%E5%83%B9%E6%8C%87%E6%A8%99(metrics)/introduce)
-- metrices 分類
+- metrices [分類](%E8%A9%95%E5%83%B9%E6%8C%87%E6%A8%99(metrics)/metrics_classification)
 - metrices 回歸
 - metrices 分群
 
