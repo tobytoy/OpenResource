@@ -8,7 +8,7 @@
 
 ## 入門
 
-- 簡介 [Introduction]([PathRootWeb]%E7%B0%A1%E4%BB%8B(Introduction)/01-01%20Introduction)
+- 簡介 [Introduction]( [PathRootWeb] %E7%B0%A1%E4%BB%8B(Introduction)/01-01%20Introduction)
 - 人工智慧歷史 [History]([PathRootWeb]%E7%B0%A1%E4%BB%8B(Introduction)/)
 - 第一戰 [First Try]([PathRootWeb]%E7%B0%A1%E4%BB%8B(Introduction)/01-02%20First_Try)
 - scikit learn 提供的[玩具資料集]([PathRootWeb]%E8%B3%87%E6%96%99%E9%9B%86(datasets)/01-03%20Toy-datasets)
