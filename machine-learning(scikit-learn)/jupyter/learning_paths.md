@@ -31,6 +31,7 @@
 ## 簡易貝氏
 
 - 貝氏定理 [Bayes Theory](%E5%9F%BA%E6%9C%AC%E6%A8%A1%E5%9E%8B(basic-model)/%E8%B2%9D%E6%B0%8F(bayes)/03_01%20Bayes_Theory)
+- 簡易貝氏 [Naive Bayes](%E5%9F%BA%E6%9C%AC%E6%A8%A1%E5%9E%8B(basic-model)/%E8%B2%9D%E6%B0%8F(bayes)/03_02%20Naive_Bayes)
 
 ## SVM 支持向量機
 

@@ -59,8 +59,10 @@ path_dictionary = dict()
 path_dictionary['root'] = Path('../../machine-learning(scikit-learn)/jupyter/基本模型(basic-model)/貝氏(bayes)/')
 path_dictionary['list'] = [
                 '03_01 Bayes_Theory.ipynb',
+                '03_02 Naive_Bayes.ipynb',
                 ]
 path_dictionary_list.append(path_dictionary)
+
 
 
 # 基本模型 的 貝氏
