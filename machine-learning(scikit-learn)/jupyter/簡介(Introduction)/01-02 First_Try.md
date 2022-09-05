@@ -1,3 +1,5 @@
+
+
 # 簡介
 我們先來看看 Scikit learn 提供哪些資料"玩具資料集"，
 為什麼稱為玩具資料，因為實際處理的資料格式不會這麼統一，可能會有缺失資料。
@@ -34,23 +36,25 @@
 
 
 
-```python
+```python 
 # 得到資料 方法一: 直接得到 X, y 
 from sklearn import datasets
 
 X, y = datasets.load_iris(return_X_y=True)
 
 print('The shape of X: ', X.shape, ' The shape of y: ', y.shape)
+
 ```
 
 
-```python
+```python 
 import pandas as pd
 X_df = pd.DataFrame(X)
 X_df.describe()
 ```
 
-```python
+
+```python 
 # 得到資料 方法二: 先拿到資料物件，再得到 X, y
 from sklearn import datasets
 
@@ -67,7 +71,9 @@ display(data.target_names)
 
 y = data.target
 print('The shape of y: ', y.shape)
+
 ```
+
 
 # Diabetes dataset. 糖尿病數據集
 
@@ -91,12 +97,15 @@ print('The shape of y: ', y.shape)
 10. s6 glu, blood sugar level
 
 
-```python
+
+```python 
 # 直接得到 X, y 
 from sklearn import datasets
 
 X, y = datasets.load_diabetes(return_X_y=True)
 print('The shape of X: ', X.shape, ' The shape of y: ', y.shape)
+
+
 ```
 
 
@@ -133,36 +142,41 @@ print('The shape of X: ', X.shape, ' The shape of y: ', y.shape)
 我們下面簡單來看 make_classification 的用法。
 
 
-```python
+
+```python 
 # 直接得到 X, y 
 from sklearn import datasets
 
 X, y = datasets.make_classification(n_samples=1000, n_features=4)
+
 ```
+
 
 下面我們會開始準備你的第一戰，
 我們先準備資料
 
 
-```python
+```python 
 from sklearn import datasets
 
 X, y = datasets.load_iris(return_X_y=True)
 
 print('The shape of X: ', X.shape, ' The shape of y: ', y.shape)
+
 ```
 
 
 我們先準備基準模型 (baseline model)，假設我們無腦猜1。
 
 
-```python
+```python 
 count = 0
 for flag in y == 2:
     if flag:
         count += 1
 
 print('答對 ', count, '題，準確率: ', count/len(y))
+
 
 # 以後會教的比較高級 baseline model 使用方法
 from sklearn.dummy import DummyClassifier
@@ -171,25 +185,28 @@ baseline_model.fit(X, y)
 
 baseline_model.score(X, y)
 
+
 ```
+
 
 我們先來切分資料
 
 
-```python
+```python 
 # 切分資料
 X_train = X[:-30]
 X_test  = X[-30:]
 
 y_train = y[:-30]
 y_test  = y[-30:]
+
 ```
 
 
 我們下面展示一下流程，不用太在意模型的原理我們之後會詳細解釋。
 
 
-```python
+```python 
 from sklearn import svm
 
 C = 1.0  # SVM regularization parameter
@@ -201,31 +218,37 @@ models = (
 )
 
 models = (clf.fit(X_train, y_train) for clf in models)
+
 ```
+
 
 我們來看看訓練完的模型效果如何，我們可以檢討一下切分資料為何不好，我們可以列印出 $X$ 與 $y$ 的資料來看看。
 
 
-```python
+```python 
 from sklearn.metrics import accuracy_score
 
 for clf in models:
     y_pred = clf.predict(X_test)
     print(accuracy_score(y_test, y_pred))
+    
+    
 ```
 
 
 好像還可以，我們下面介紹一種常用的切分資料的方法，稱為Holdout Method，切為 train ， test 集合，我們在以後cross-validation的章節會詳細介紹其他方法，我們現在就先來試試他的威力八。
 
 
-```python
+
+```python 
 from sklearn.model_selection import train_test_split
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=87)
+
 ```
 
 
-```python
+```python 
 from sklearn import svm
 
 C = 1.0  # SVM regularization parameter
@@ -237,27 +260,30 @@ models = (
 )
 
 models = (clf.fit(X_train, y_train) for clf in models)
+
 ```
 
 
-```python
+```python 
 from sklearn.metrics import accuracy_score
 
 for clf in models:
     y_pred = clf.predict(X_test)
     print(accuracy_score(y_test, y_pred))
+
+
 ```
+
 
 恭喜你完成人生的第一場戰鬥，下面我們要介紹一些很重要的概念，```over fitting``` 跟 ```under fitting```。
 
 
-![alt fitting](https://github.com/tobytoy/OpenResource/raw/c16bb017640a8e550731d8d97fe4fc48a8fee16b/machine-learning(scikit-learn)/images/fitting_problem.png)
+![alt fitting](../../images/fitting_problem.png)
 
 
 你已經完成人生的第一場戰鬥，但是打鐵要趁熱，我們先來說說妳以後訓練模型可能會碰到的問題，模型的錯誤可以簡單分為 Bias 與 Variance的大小，我們以後會介紹ensemble方法，我們看完下面的圖就可以理解ensemble的投票(voting)與平均(mean)為何可以增加模型的準度，但是我在這邊也要波一下冷水，在實務上除非你做的模型沒有時間壓力，不然通常不會用ensemble強化你的模型的準確度。
 
 
-![alt bias-variance](https://github.com/tobytoy/OpenResource/raw/c16bb017640a8e550731d8d97fe4fc48a8fee16b/machine-learning(scikit-learn)/images/bias-and-variance_orig.png)
 
 
-
+![alt bias-variance](../../images/bias-and-variance_orig.png)

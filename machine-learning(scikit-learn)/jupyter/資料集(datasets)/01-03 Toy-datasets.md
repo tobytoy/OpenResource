@@ -1,3 +1,5 @@
+
+
 # 簡介
 我們先來看看 Scikit learn 提供哪些資料"玩具資料集"，
 為什麼稱為玩具資料，因為實際處理的資料格式不會這麼統一，可能會有缺失資料。
@@ -45,7 +47,7 @@
 之後會詳細一一介紹這些數據集。我們先來看 Scikit learn package 裡面。
 
 
-```python
+```python 
 from sklearn import datasets
 
 index = 0
@@ -53,7 +55,9 @@ for item in dir(datasets):
   if item.split('_')[0] == 'load':
     index += 1
     print(index, '\t', item)
+
 ```
+
 
 # Boston house prices dataset. 波士頓房價數據集
 
@@ -81,7 +85,9 @@ for item in dir(datasets):
 - MEDV : 自有住房的價值中位數（以1000美元計）
 
 
-```python
+
+
+```python 
 # 得到資料 方法一: 直接得到 X, y 
 from sklearn import datasets
 
@@ -92,9 +98,12 @@ with warnings.catch_warnings():
     X, y = datasets.load_boston(return_X_y=True)
     print('The shape of X: ', X.shape, '\n')
     print('The shape of y: ', y.shape)
+
+  
 ```
 
-```python
+
+```python 
 # 得到資料 方法二: 先拿到資料物件，再得到 X, y
 from sklearn import datasets
 
@@ -113,7 +122,9 @@ with warnings.catch_warnings():
 
     y = data.target
     print('The shape of y: ', y.shape)
+
 ```
+
 
 # Iris plants dataset. 鳶尾植物數據集
 
@@ -140,16 +151,20 @@ with warnings.catch_warnings():
 3. Virginica， 維吉尼亞鳶尾
 
 
-```python
+
+
+```python 
 # 得到資料 方法一: 直接得到 X, y 
 from sklearn import datasets
 
 X, y = datasets.load_iris(return_X_y=True)
 
 print('The shape of X: ', X.shape, ' The shape of y: ', y.shape)
+
 ```
 
-```python
+
+```python 
 # 得到資料 方法二: 先拿到資料物件，再得到 X, y
 from sklearn import datasets
 
@@ -193,16 +208,19 @@ print('The shape of y: ', y.shape)
 
 
 
-```python
+
+```python 
 # 得到資料 方法一: 直接得到 X, y 
 from sklearn import datasets
 
 X, y = datasets.load_diabetes(return_X_y=True)
 
 print('The shape of X: ', X.shape, ' The shape of y: ', y.shape)
+
 ```
 
-```python
+
+```python 
 # 得到資料 方法二: 先拿到資料物件，再得到 X, y
 from sklearn import datasets
 
@@ -216,6 +234,7 @@ print('The shape of X: ', X.shape, '\n')
 
 y = data.target
 print('The shape of y: ', y.shape)
+
 ```
 
 
@@ -234,7 +253,8 @@ print('The shape of y: ', y.shape)
 10 個類別，0 ~ 9。
 
 
-```python
+
+```python 
 # 得到資料 方法一: 直接得到 X, y 
 from sklearn import datasets
 
@@ -243,7 +263,8 @@ X, y = datasets.load_digits(return_X_y=True)
 print('The shape of X: ', X.shape, ' The shape of y: ', y.shape)
 ```
 
-```python
+
+```python 
 # 得到資料 方法二: 先拿到資料物件，再得到 X, y
 from sklearn import datasets
 
@@ -259,6 +280,7 @@ y = data.target
 print('The shape of y: ', y.shape)
 ```
 
+
 # Linnerrud 數據集
 
 * Number of Instances: <font color=#0000FF>$20$</font> <br>
@@ -270,7 +292,9 @@ print('The shape of y: ', y.shape)
 * Category : regression
 
 
-```python
+
+
+```python 
 # 得到資料 方法一: 直接得到 X, y 
 from sklearn import datasets
 
@@ -279,7 +303,8 @@ X, y = datasets.load_linnerud(return_X_y=True)
 print('The shape of X: ', X.shape, ' The shape of y: ', y.shape)
 ```
 
-```python
+
+```python 
 # 得到資料 方法二: 先拿到資料物件，再得到 X, y
 from sklearn import datasets
 
@@ -296,6 +321,7 @@ display(data.target_names)
 
 y = data.target
 print('The shape of y: ', y.shape)
+
 ```
 
 
@@ -329,7 +355,7 @@ print('The shape of y: ', y.shape)
 
 
 
-```python
+```python 
 # 得到資料 方法一: 直接得到 X, y 
 from sklearn import datasets
 
@@ -338,7 +364,8 @@ X, y = datasets.load_wine(return_X_y=True)
 print('The shape of X: ', X.shape, ' The shape of y: ', y.shape)
 ```
 
-```python
+
+```python 
 # 得到資料 方法二: 先拿到資料物件，再得到 X, y
 from sklearn import datasets
 
@@ -367,7 +394,8 @@ print('The shape of y: ', y.shape)
 * Category : classification
 
 
-```python
+
+```python 
 # 得到資料 方法一: 直接得到 X, y 
 from sklearn import datasets
 
@@ -376,7 +404,8 @@ X, y = datasets.load_breast_cancer(return_X_y=True)
 print('The shape of X: ', X.shape, ' The shape of y: ', y.shape)
 ```
 
-```python
+
+```python 
 # 得到資料 方法二: 先拿到資料物件，再得到 X, y
 from sklearn import datasets
 
@@ -394,8 +423,3 @@ display(data.target_names)
 y = data.target
 print('The shape of y: ', y.shape)
 ```
-
-
-
-
-

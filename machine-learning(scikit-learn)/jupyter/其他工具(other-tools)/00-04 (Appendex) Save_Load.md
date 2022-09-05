@@ -1,7 +1,9 @@
+
+
 今天會介紹兩個方法去做存檔讀檔， ```pickel``` 跟 ```joblib```。
 
 
-```python
+```python 
 # pickle save
 from sklearn import svm
 from sklearn import datasets
@@ -16,29 +18,34 @@ classifier.fit(X, y)
 
 with open(model_path, 'wb') as f:
     pickle.dump(classifier, f)
+
+
 ```
 
 
-```python
+```python 
 # pickle load
 import pickle
 
 with open(model_path, 'rb') as f:
     classifier_load = pickle.load(f)
+
+
 ```
 
 
-```python
+```python 
 # check pickel
 print('classifier pred:', classifier.predict(X[0:10]))
 print('classifier load pred:', classifier_load.predict(X[0:10]))
 
 ```
 
+
 下面示範 joblib
 
 
-```python
+```python 
 # joblib save
 import joblib
 from sklearn import svm
@@ -55,10 +62,11 @@ classifier.fit(X, y)
 with open(model_path, 'wb') as f:
     joblib.dump(classifier, f)
 
+
 ```
 
 
-```python
+```python 
 # joblib load
 import joblib
 
@@ -68,7 +76,7 @@ with open(model_path, 'rb') as f:
 ```
 
 
-```python
+```python 
 # joblib check
 
 print('classifier pred:', classifier.predict(X[0:10]))
@@ -76,8 +84,15 @@ print('classifier load pred:', classifier_load.predict(X[0:10]))
 
 ```
 
+
 scikit learn 官方是推薦使用 joblib，
 官方提到 joblib 比 pickel 更高效，對於大的 numpy 陣列更好。
 
+
+
+
+# scikit learn onnx
+
+下面要介紹怎麼把你的模型轉為 onnx
 
 

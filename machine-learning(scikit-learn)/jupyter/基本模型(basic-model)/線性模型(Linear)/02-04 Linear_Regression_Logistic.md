@@ -1,3 +1,5 @@
+
+
 # Logistic Function
 在說 Logistic Regression 之前我們先說 Logistic Function
 
@@ -7,7 +9,7 @@ $$
 
 
 
-```python
+```python 
 import numpy as np
 import matplotlib.pyplot as plt
 %matplotlib inline
@@ -17,6 +19,7 @@ x = np.arange(-5, 5, 0.1)
 y = 1/(1+np.exp(-x))
 
 plt.plot(x, y)
+
 ```
 
 
@@ -31,7 +34,8 @@ $$
 對了二分類怎麼加殼成為多分類請參考 輸出，下面進入實戰。
 
 
-```python
+
+```python 
 # Logistic Regression
 import numpy as np
 from sklearn import datasets
@@ -51,7 +55,9 @@ y_pred = classifier.predict(X_test)
 
 print('Training accuracy: ', classifier.score(X_train, y_train))
 print('Testing accuracy: ', classifier.score(X_test, y_test))
+
 ```
+
 
 我們還可以用參數去做 Ridge, Lasso 跟 Elastic-Net <br>
 
@@ -69,7 +75,7 @@ print('Testing accuracy: ', classifier.score(X_test, y_test))
 
 
 
-```python
+```python 
 # Logistic Regression
 import numpy as np
 from sklearn import datasets
@@ -89,10 +95,5 @@ y_pred = classifier.predict(X_test)
 
 print('Training accuracy: ', classifier.score(X_train, y_train))
 print('Testing accuracy: ', classifier.score(X_test, y_test))
+
 ```
-
-
-
-
-
-

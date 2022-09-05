@@ -1,3 +1,11 @@
+
+
+在開始之前我們必須要好好說說為何等一下要學習的內容這麼重要
+
+![real](../../../images/imagineVsReal.png)
+
+
+
 # Simple regression
 
 線性回歸(Linear regresion) 是 監督學習(supervised learning)，最簡單的線性回歸稱為簡單回歸(Simple regression)，
@@ -37,7 +45,9 @@ y = 5 x + 25
 $$
 
 
-```python
+
+
+```python 
 %matplotlib inline
 import matplotlib.pyplot as plt
 import numpy as np
@@ -49,12 +59,14 @@ rands = np.random.RandomState(87)
 x = 10 * rands.rand(50)
 y = 5 * x + 25 + rands.randn(50)
 plt.scatter(x, y)
+
 ```
+
 
 我們下面要用 Scikit-Learn 的 Linear Regression 去找一條最符合的線。
 
 
-```python
+```python 
 from sklearn.linear_model import LinearRegression
 model = LinearRegression(fit_intercept=True)
 
@@ -66,6 +78,7 @@ yfit = model.predict(xfit[:, np.newaxis])
 plt.scatter(x, y)
 plt.plot(xfit, yfit)
 ```
+
 
 # Linear Regresion
 
@@ -114,7 +127,9 @@ $$
 ## 下面我們來看其他例子
 
 
-```python
+
+
+```python 
 # 先準備資料
 import numpy as np
 from sklearn import datasets
@@ -138,14 +153,14 @@ print('w_0 截距：', regression.intercept_)
 
 # The mean squared error 我們以後會介紹 metrics 就會認識 mse，現在先用。
 print("Mean squared error: %.2f" % mean_squared_error(y_test, y_pred))
+
 ```
 
 
 如果我們要求前面的係數 $w$ 都為正。
 
 
-
-```python
+```python 
 import numpy as np
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
@@ -165,6 +180,7 @@ y_pred = regression.predict(X_test)
 print('w 係數：', regression.coef_)
 print('w_0 截距：', regression.intercept_)
 print("Mean squared error: %.2f" % mean_squared_error(y_test, y_pred))
+
 ```
 
 
@@ -203,7 +219,8 @@ where $\alpha > 0, \rho \in [0, 1]$.
 下面開始實戰。
 
 
-```python
+
+```python 
 # Ridge Regression
 import numpy as np
 from sklearn import datasets
@@ -224,6 +241,7 @@ y_pred = regression.predict(X_test)
 print('w 係數：', regression.coef_)
 print('w_0 截距：', regression.intercept_)
 print("Mean squared error: %.2f" % mean_squared_error(y_test, y_pred))
+
 ```
 
 
@@ -238,7 +256,8 @@ print("Mean squared error: %.2f" % mean_squared_error(y_test, y_pred))
 下面開始實戰。
 
 
-```python
+
+```python 
 # Ridge Classification
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
@@ -257,13 +276,14 @@ classifier = RidgeClassifier().fit(X_train, y_train)
 # The Score will Return the mean accuracy on the given test data and labels.
 print('Training accuracy: ', classifier.score(X_train, y_train))
 print('Testing accuracy: ', classifier.score(X_test, y_test))
+
 ```
 
 
 下面開始 Lasso Regression 的實戰。
 
 
-```python
+```python 
 # Lasso Regression
 import numpy as np
 from sklearn import datasets
@@ -284,6 +304,7 @@ y_pred = regression.predict(X_test)
 print('w 係數：', regression.coef_)
 print('w_0 截距：', regression.intercept_)
 print("Mean squared error: %.2f" % mean_squared_error(y_test, y_pred))
+
 ```
 
 
@@ -308,7 +329,9 @@ $$
 下面我們可以比較一下 Lasso 與 Multi-task Lasso，我們可以看到 Multi-task Lasso 非$0$的係數比 Lasso 多，這也表明 Multi-task Lasso 的方法訓練的模型會比較活躍。
 
 
+
 ![alt coefficient](../../../images/sphx_glr_plot_multi_task_lasso_support_001.png)
+
 
 在預測時間序列的資料上 Multi-task Lasso 的表現也比 Lasso 好。
 
@@ -319,7 +342,7 @@ $$
 下面進入 Multi-task Lasso 的實戰。
 
 
-```python
+```python 
 # MultiTaskLasso
 import numpy as np
 from sklearn import datasets
@@ -345,13 +368,16 @@ y_pred = regression.predict(X_test)
 print('w 係數：', regression.coef_)
 print('w_0 截距：', regression.intercept_)
 print("Mean squared error: %.2f" % mean_squared_error(y_test, y_pred))
+
+
+
 ```
 
 
 下面開始 Elastic-Net Regression 的實戰。
 
 
-```python
+```python 
 # Elastic-Net Regression
 import numpy as np
 from sklearn import datasets
@@ -372,6 +398,7 @@ y_pred = regression.predict(X_test)
 print('w 係數：', regression.coef_)
 print('w_0 截距：', regression.intercept_)
 print("Mean squared error: %.2f" % mean_squared_error(y_test, y_pred))
+
 ```
 
 
@@ -392,7 +419,11 @@ $$
 怕大家搞混這邊要特別提一下 $\| w \|_{Fro}$ 跟 $\| w \|_2$ 因為現在這邊是多任務的問題，所以維度提高了，但是精神是一樣的。
 
 
-```python
+
+
+
+
+```python 
 # MultiTaskElasticNet
 import numpy as np
 from sklearn import datasets
@@ -418,7 +449,9 @@ y_pred = regression.predict(X_test)
 print('w 係數：', regression.coef_)
 print('w_0 截距：', regression.intercept_)
 print("Mean squared error: %.2f" % mean_squared_error(y_test, y_pred))
+
 ```
+
 
 # 你太棒了! 你辦到了! 感覺如何阿，當你覺得可以的時候可以進入下一個階段。
 

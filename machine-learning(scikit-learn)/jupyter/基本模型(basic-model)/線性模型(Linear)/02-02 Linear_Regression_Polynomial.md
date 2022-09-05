@@ -1,3 +1,5 @@
+
+
 # Review
 這邊先回顧一下前面討論的線性回歸，其實我們就是用$w_0 + w_1 x_1 + w_2 x_2 + w_3 x_3 + \cdots $去估計 $y$。
 
@@ -28,13 +30,16 @@ $$
 沒錯這次的主題就是多項式回歸，我們要怎麼生出更多的特徵 ``PolynomialFeatures`` 就是要用到他啦，下面進入實戰。
 
 
-```python
+
+
+```python 
 import numpy as np
 from sklearn.preprocessing import PolynomialFeatures
 
 x = np.array([1, 2, 3, 4])
 poly = PolynomialFeatures(degree=4, include_bias=False)
 poly.fit_transform(x[:, None])
+
 ```
 
 
@@ -44,7 +49,7 @@ $$
 $$
 
 
-```python
+```python 
 from sklearn.preprocessing import PolynomialFeatures
 import numpy as np
 
@@ -54,7 +59,9 @@ display(X)
 
 poly = PolynomialFeatures(degree=2)
 poly.fit_transform(X)
+
 ```
+
 
 # Linear Polynomial Regression 
 
@@ -62,7 +69,7 @@ poly.fit_transform(X)
 
 
 
-```python
+```python 
 # 先準備資料
 import numpy as np
 from sklearn.preprocessing import PolynomialFeatures
@@ -94,11 +101,11 @@ print('w_0 截距：', regression.intercept_)
 print("Mean squared error: %.2f" % mean_squared_error(y_test, y_pred))
 ```
 
+
 如果前面係數要求是正的
 
 
-
-```python
+```python 
 import numpy as np
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
@@ -123,13 +130,14 @@ y_pred = regression.predict(X_test)
 #print('w 係數：', regression.coef_)
 print('w_0 截距：', regression.intercept_)
 print("Mean squared error: %.2f" % mean_squared_error(y_test, y_pred))
+
 ```
 
 
 # Ridge Poly Regression
 
 
-```python
+```python 
 # Ridge Regression
 import numpy as np
 from sklearn import datasets
@@ -161,7 +169,7 @@ print("Mean squared error: %.2f" % mean_squared_error(y_test, y_pred))
 # Ridge Poly Classification
 
 
-```python
+```python 
 # Ridge Classification
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
@@ -187,10 +195,11 @@ print('Training accuracy: ', classifier.score(X_train, y_train))
 print('Testing accuracy: ', classifier.score(X_test, y_test))
 ```
 
+
 # Lasso Poly Regression
 
 
-```python
+```python 
 # Lasso Poly Regression
 import numpy as np
 from sklearn import datasets
@@ -216,12 +225,14 @@ y_pred = regression.predict(X_test)
 #print('w 係數：', regression.coef_)
 print('w_0 截距：', regression.intercept_)
 print("Mean squared error: %.2f" % mean_squared_error(y_test, y_pred))
+
 ```
+
 
 # Elastic-Net Poly Regression
 
 
-```python
+```python 
 # Elastic-Net Poly Regression
 import numpy as np
 from sklearn import datasets
@@ -248,11 +259,3 @@ y_pred = regression.predict(X_test)
 print('w_0 截距：', regression.intercept_)
 print("Mean squared error: %.2f" % mean_squared_error(y_test, y_pred))
 ```
-
-
-
-
-
-
-
-

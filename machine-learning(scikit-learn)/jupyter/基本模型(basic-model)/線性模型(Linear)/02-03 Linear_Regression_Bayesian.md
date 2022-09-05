@@ -1,3 +1,5 @@
+
+
 # gaussian distribution, normal distribution
 我們要先來回憶常態分佈 <br>
 
@@ -8,12 +10,14 @@ $$
 其中的 $\mu$ 是 mean ， $\sigma$ 是 standard deviation。 
 
 
-```python
+
+```python 
 import numpy as np
 from scipy.stats import norm
 import matplotlib.pyplot as plt
 %matplotlib inline
 plt.rcParams['figure.figsize'] = [10, 10]
+
 
 mu, sigma = 0, 1
 xlim = [mu - 5 * sigma, mu + 5 * sigma]
@@ -35,6 +39,7 @@ plt.title('Normal({}, {})'.format(mu, sigma))
 plt.show()
 ```
 
+
 # Bayesian Regression
 
 我們已經很熟悉 Linear Regression 了，我們用比較不精確的方法解釋 Bayesian Regression。
@@ -43,7 +48,10 @@ $$
 \min_w \sum_i \| y_i -N(f_w(x_i), \sigma^2) \|_2^2
 $$
 
-```python
+
+
+
+```python 
 # Bayesian Regression
 import numpy as np
 from sklearn import datasets
@@ -67,7 +75,7 @@ print("Mean squared error: %.2f" % mean_squared_error(y_test, y_pred))
 ```
 
 
-```python
+```python 
 from sklearn.preprocessing import PolynomialFeatures
 import numpy as np
 from sklearn import datasets
@@ -93,6 +101,8 @@ y_pred = regression.predict(X_test)
 print('w_0 截距：', regression.intercept_)
 print("Mean squared error: %.2f" % mean_squared_error(y_test, y_pred))
 
+
+
 ```
 
 
@@ -103,7 +113,7 @@ print("Mean squared error: %.2f" % mean_squared_error(y_test, y_pred))
 
 
 
-```python
+```python 
 # ARD Regression
 import numpy as np
 from sklearn import datasets
@@ -124,10 +134,11 @@ y_pred = regression.predict(X_test)
 print('w 係數：', regression.coef_)
 print('w_0 截距：', regression.intercept_)
 print("Mean squared error: %.2f" % mean_squared_error(y_test, y_pred))
+
 ```
 
 
-```python
+```python 
 from sklearn.preprocessing import PolynomialFeatures
 import numpy as np
 from sklearn import datasets
@@ -152,18 +163,5 @@ y_pred = regression.predict(X_test)
 #print('w 係數：', regression.coef_)
 print('w_0 截距：', regression.intercept_)
 print("Mean squared error: %.2f" % mean_squared_error(y_test, y_pred))
+
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
