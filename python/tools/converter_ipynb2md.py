@@ -84,8 +84,6 @@ path_dictionary['list'] = [
 path_dictionary_list.append(path_dictionary)
 
 
-
-
 # 基本模型 的 SGD
 path_dictionary = dict()
 path_dictionary['root'] = Path('../../machine-learning(scikit-learn)/jupyter/基本模型(basic-model)/隨機梯度下降(stochastic-gradient-descent)/')
@@ -113,6 +111,14 @@ path_dictionary['list'] = [
                 ]
 path_dictionary_list.append(path_dictionary)
 
+
+# 基本模型 的 Clustering
+path_dictionary = dict()
+path_dictionary['root'] = Path('../../machine-learning(scikit-learn)/jupyter/基本模型(basic-model)/Clustering/')
+path_dictionary['list'] = [
+                '07_01 Introduction_and_Kmeans.ipynb',
+                ]
+path_dictionary_list.append(path_dictionary)
 
 
 
