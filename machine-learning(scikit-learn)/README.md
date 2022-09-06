@@ -35,3 +35,4 @@
 ## ML
 
 - [Machine Learning Algorithm](https://github.com/tomohiroliu22/Machine-Learning-Algorithm)
+- [python machine learning book](https://github.com/rasbt/python-machine-learning-book-3rd-edition)
