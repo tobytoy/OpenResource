@@ -73,16 +73,22 @@ Variance 為 $2$ 階主動差
 
 $$Var(X) = \mu_2(E(X))$$
 
-## Skewness 偏態
+## (Fisher's) Skewness 偏態
 
-Skewness 的定義就是 $3$ 階主動差
+Skewness 的定義需要 $3$ 階主動差
 
-$$Skew(X) = \mu_3(E(X))$$
+$$Skew(X) := E \Big[ (\frac{X -\mu}{\sigma})^3 \Big]=\frac{\mu_3(E(X))}{\sigma^3}$$
 
 
-# Kurtosis 峰度
+## (Fisher's) Kurtosis 峰度
 
-Kurtosis 的定義就是 $4$ 階主動差
+Kurtosis 的定義需要 $4$ 階主動差
 
-$$Kurt(X) = \mu_3(E(X))$$
+$$Kurt(X) := \frac{\mu_4(E(X))}{\sigma^4}$$
+
+### excess kurtosis
+
+但是我們常常希望以常態分布為標準，所以我們會定義
+
+$$Kurt(X) := \frac{\mu_4(E(X))}{\sigma^4} - 3$$
 

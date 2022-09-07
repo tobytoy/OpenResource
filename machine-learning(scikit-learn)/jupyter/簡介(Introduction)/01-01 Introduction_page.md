@@ -20,10 +20,11 @@ MathJax.Hub.Config({
 不過也需要你是一個優秀的軟體工程師，通常基本技能要熟悉 python 與 R ，加分項目包含前端(javascript, React, Vue等)，後端(Node.js, java 等)與容器化技術，CICD等。
 
 
+![meme_01](../../images/meme/meme_01-01_Introduction_01.png)
+
+
+
 ## 工作流程
-
-
-
 ![資料科學家工作流程](../../images/Data+Science+Workflow+Image.jpg)
 
 
