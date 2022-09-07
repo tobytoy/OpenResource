@@ -123,6 +123,20 @@ path_dictionary_list.append(path_dictionary)
 
 
 ##############################################################
+####              Statistics 統計       
+##############################################################
+
+# 基本模型 的 Clustering
+path_dictionary = dict()
+path_dictionary['root'] = Path('../../statistics/jupyter/基礎統計(basic)/')
+path_dictionary['list'] = [
+                'basic-01.ipynb',
+                ]
+path_dictionary_list.append(path_dictionary)
+
+
+
+##############################################################
 ####                     匯入清單
 ##############################################################
 path_list = []
