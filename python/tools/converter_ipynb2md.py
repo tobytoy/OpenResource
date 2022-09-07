@@ -134,11 +134,23 @@ for dictionary in path_dictionary_list:
 
 
 def converter(path_ipynb):
+    text_header = """<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+    inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+    processEscapes: true
+    }
+});
+</script>\n\n"""
+
     with open(path_ipynb, encoding = "UTF-8") as file:
         data = json.load(file)
 
     file_name = path_ipynb.name.split('.ipynb')[0] + '.md'
+    file_page_name = path_ipynb.name.split('.ipynb')[0] + '_page.md'
     file_path = path_ipynb.parent / file_name
+    file_page_path = path_ipynb.parent / file_page_name
     file_text = ""
 
     for _cells in data['cells']:
@@ -159,6 +171,9 @@ def converter(path_ipynb):
 
     with open(file_path, "w", encoding = "UTF-8") as file:
         file.write(file_text)
+
+    with open(file_page_path, "w", encoding = "UTF-8") as file:
+        file.write(text_header+file_text)
     
 
 def main():
