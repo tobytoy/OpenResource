@@ -38,8 +38,10 @@ path_dictionary['root'] = Path('../../machine-learning(scikit-learn)/jupyter/資
 path_dictionary['list'] = [
                 '01-03 Toy-datasets.ipynb',
                 '01-04 Generated-Datasets.ipynb',
+                '01-05 Other-Datasets.ipynb'
                 ]
 path_dictionary_list.append(path_dictionary)
+
 
 
 # 基本模型 的 線性模型
