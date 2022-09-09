@@ -11,6 +11,7 @@
 - 第一戰 [First Try](%E7%B0%A1%E4%BB%8B(Introduction)/01-02%20First_Try_page)
 - scikit learn 提供的[玩具資料集](%E8%B3%87%E6%96%99%E9%9B%86(datasets)/01-03%20Toy-datasets_page)
 - scikit learn 提供的[生成資料集](%E8%B3%87%E6%96%99%E9%9B%86(datasets)/01-04%20Generated-Datasets_page)
+- [其他資料集](%E8%B3%87%E6%96%99%E9%9B%86(datasets)/01-05%20Other-Datasets_page)
 
 ## 線性模型基礎
 
