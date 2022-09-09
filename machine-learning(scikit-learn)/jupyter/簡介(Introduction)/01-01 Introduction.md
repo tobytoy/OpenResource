@@ -94,7 +94,7 @@
 等你都修到大家都沒問題就可以等上線。
 
 
-![real](../../images/imagineVsReal.png)
+![real](../../images/meme/meme_01-01_Introduction_02.png)
 
 
 # 人工智慧 Artificial Intelligence (AI)
@@ -114,13 +114,15 @@
 ![AI的分類](../../images/Blausen_0657_MultipolarNeuron.png)
 
 
-假設 $\phi$ 是一個人工神經元函數，$\phi$ 的輸入就是一串訊號 $(x_1, \cdots , x_n)$，
-$\phi$的第一步會把訊號做加權，
+假設 $\phi$ 是一個人工神經元函數， $\phi$ 的輸入就是一串訊號 $(x_1, \cdots , x_n)$ ，
+$\phi$ 的第一步會把訊號做加權，
+
 $$
 z= w_1 x_1 + \cdots + w_n x_n
 $$
-我們腦中也常常會自動忽略我們不在意的訊號(例如你老闆的叫聲)，也會自動加強你在意的訊號(例如你男女朋友的呼喚)。<br>
-第二步就是根據這些訊號，我們要不要被激活，如果$z$大於例如$0.5$就被激活，小於$0.5$就不被激活，這其實就叫做邏輯回歸(logistic regression)我們以後會提到。<br>
+
+我們腦中也常常會自動忽略我們不在意的訊號(例如你老闆的叫聲)，也會自動加強你在意的訊號(例如你男女朋友的呼喚)。 <br>
+第二步就是根據這些訊號，我們要不要被激活，如果$z$大於例如$0.5$就被激活，小於$0.5$就不被激活，這其實就叫做邏輯回歸(logistic regression)我們以後會提到。 <br>
 深度學習就是把很多神經元疊起來去做分析判斷的技術。
 
 
@@ -225,4 +227,4 @@ scikit learn 是現在最流行的機器學習套件之一， scikit learn 是�
 為什麼我們要有 Baseline Model?
 
 
-![just do it](../../images/justDoIt.jpg)
+![just do it](../../images/meme/meme_01-01_Introduction_03.png)

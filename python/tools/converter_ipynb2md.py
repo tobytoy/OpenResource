@@ -1,5 +1,6 @@
 from pathlib import Path
 from tqdm import tqdm
+import os
 import json
 
 
@@ -184,6 +185,11 @@ MathJax.Hub.Config({
                 file_text += "\n\n```python \n" + "".join(cells_source) + "\n```\n"
             elif cells_type == 'markdown':
                 file_text += "\n\n" + "".join(cells_source) + "\n"
+
+    if file_path.exists():
+        os.remove(file_path)
+    if file_page_path.exists():
+        os.remove(file_page_path)
 
     with open(file_path, "w", encoding = "UTF-8") as file:
         file.write(file_text)
