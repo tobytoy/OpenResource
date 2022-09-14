@@ -105,6 +105,16 @@ path_dictionary['list'] = [
 path_dictionary_list.append(path_dictionary)
 
 
+# 基本模型 的 NearestNeighbors
+path_dictionary = dict()
+path_dictionary['root'] = Path('../../machine-learning(scikit-learn)/jupyter/基本模型(basic-model)/樹模型(decision-trees)/')
+path_dictionary['list'] = [
+                '08_01 Introduce.ipynb',
+                ]
+path_dictionary_list.append(path_dictionary)
+
+
+
 # 評價指標 metrics 
 path_dictionary = dict()
 path_dictionary['root'] = Path('../../machine-learning(scikit-learn)/jupyter/評價指標(metrics)/')
