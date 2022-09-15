@@ -18,7 +18,7 @@ MathJax.Hub.Config({
 * 我們對於分析事物很有興趣
 * 薪水: 當資料科學家的薪水不錯 <br>
 
-不過也需要你是一個優秀的軟體工程師，通常具備的基本技能要熟悉 python 與 R ，加分項目包含前端 javascript, React, Vue 與 javascript,React,Vue 等，後端 Node.js, java 與 Node.js,java 等以及容器化技術， CICD 等等。
+不過也需要你是一個優秀的軟體工程師，通常具備的基本技能要熟悉 python 與 R ，加分項目包含前端 javascript, React, Vue 與 後端 Node.js, java 等以及容器化技術， CICD 等等。
 
 
 <div style="text-align: center">

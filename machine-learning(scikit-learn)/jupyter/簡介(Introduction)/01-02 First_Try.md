@@ -291,3 +291,45 @@ for clf in models:
 
 
 ![alt bias-variance](../../images/bias-and-variance_orig.png)
+
+
+## Ensemble
+下面來簡單介紹 ensemble 的方法，可以分為兩大類
+
+- 平均法 averaging methods <br>
+例如我們可以訓練許多中型的模型 (Low Bias)，然後讓他們投票，
+就有可能給出 Low Bias 跟 Low Variance 的更好的模型。
+
+- 提升法 boosting methods <br>
+我們還有另一個思路，三個臭皮匠勝過一個諸葛亮，我們一個打不過，可以不講武德車輪戰一個一個上阿，
+每次進步一點，那多輪以後就有一個強大的模型。 <br>
+下面舉個例子，假設我們要做的問題是二分類問題，如果隨便猜，猜對的機率因該是 $1/2$，
+假設我們有一個方法可以比亂猜的機率高一點，假設是 $1/2 + 0.00001$，
+那我們可以給他好幾關。
+
+![boosting](../../images/boosting_method.drawio.png)
+
+
+
+
+```python 
+# 可以答對的機率
+q = 0.5 + 0.00001
+# 錯誤的機率
+err_rate = 1 - q
+
+for i in range(10):
+    print('第 ', i+1, ' 次答對機率: ', 1 - err_rate)
+    err_rate = err_rate * (1-q)
+
+```
+
+
+### 總結
+
+平均法(例如 voting 或 bagging)對於每個強大與複雜的模型還要在更進一步的提升非常有效，
+也可以緩解 over fitting 等問題，但是如果拿來平均的模型有老鼠屎，
+ensemble 的模型會不升反降，
+提升法去整合弱模型有良好的表現。
+
+
