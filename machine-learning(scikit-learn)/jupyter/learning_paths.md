@@ -15,10 +15,10 @@
 
 ## 線性模型基礎
 
-- 線性模型 [Linear Regression](%E5%9F%BA%E6%9C%AC%E6%A8%A1%E5%9E%8B(basic-model)/%E7%B7%9A%E6%80%A7%E6%A8%A1%E5%9E%8B(Linear)/02_01%20Linear_Regression_page)
-- 線性模型(多項式) [Polynomial](%E5%9F%BA%E6%9C%AC%E6%A8%A1%E5%9E%8B(basic-model)/%E7%B7%9A%E6%80%A7%E6%A8%A1%E5%9E%8B(Linear)/02_02%20Linear_Regression_Polynomial_page)
-- 線性模型(貝氏) [Bayesian](%E5%9F%BA%E6%9C%AC%E6%A8%A1%E5%9E%8B(basic-model)/%E7%B7%9A%E6%80%A7%E6%A8%A1%E5%9E%8B(Linear)/02_03%20Linear_Regression_Bayesian_page)
-- 線性模型(邏輯回歸) [Logistic](%E5%9F%BA%E6%9C%AC%E6%A8%A1%E5%9E%8B(basic-model)/%E7%B7%9A%E6%80%A7%E6%A8%A1%E5%9E%8B(Linear)/02_04%20Linear_Regression_Logistic_page)
+- 線性模型 [Linear Regression](%E5%9F%BA%E6%9C%AC%E6%A8%A1%E5%9E%8B(basic-model)/%E7%B7%9A%E6%80%A7%E6%A8%A1%E5%9E%8B(Linear)/02-01%20Linear_Regression_page)
+- 線性模型(多項式) [Polynomial](%E5%9F%BA%E6%9C%AC%E6%A8%A1%E5%9E%8B(basic-model)/%E7%B7%9A%E6%80%A7%E6%A8%A1%E5%9E%8B(Linear)/02-02%20Linear_Regression_Polynomial_page)
+- 線性模型(貝氏) [Bayesian](%E5%9F%BA%E6%9C%AC%E6%A8%A1%E5%9E%8B(basic-model)/%E7%B7%9A%E6%80%A7%E6%A8%A1%E5%9E%8B(Linear)/02-03%20Linear_Regression_Bayesian_page)
+- 線性模型(邏輯回歸) [Logistic](%E5%9F%BA%E6%9C%AC%E6%A8%A1%E5%9E%8B(basic-model)/%E7%B7%9A%E6%80%A7%E6%A8%A1%E5%9E%8B(Linear)/02-04%20Linear_Regression_Logistic_page)
 
 ## 基本工具
 
@@ -26,6 +26,8 @@
 - Python 的視覺化 [Matplotlib](%E5%85%B6%E4%BB%96%E5%B7%A5%E5%85%B7(other-tools)/00-02%20(Appendex)%20Visualization_page)
 - Python 的高階視覺化 [Seabon](%E5%85%B6%E4%BB%96%E5%B7%A5%E5%85%B7(other-tools)/00-03%20(Appendex)%20seabon_page)
 - 存檔讀檔 [Save_Load](%E5%85%B6%E4%BB%96%E5%B7%A5%E5%85%B7(other-tools)/00-04%20(Appendex)%20Save_Load_page)
+
+
 
 ## 簡易貝氏
 

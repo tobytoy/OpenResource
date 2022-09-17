@@ -12,7 +12,7 @@ MathJax.Hub.Config({
 
 在開始之前我們必須要好好說說為何等一下要學習的內容這麼重要
 
-![real](../../../images/imagineVsReal.png)
+![real](../../../images/meme/meme_01-01_Introduction_02.png)
 
 
 
