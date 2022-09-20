@@ -18,8 +18,8 @@ MathJax.Hub.Config({
 
 # Simple regression
 
-線性回歸 (Linear regresion) 是 監督學習 (supervised learning)，
-最簡單的線性回歸稱為簡單回歸 (Simple regression)，
+線性回歸 ( Linear regresion ) 是 監督學習 （ supervised learning ），
+最簡單的線性回歸稱為簡單回歸 （Simple regression），
 
 $$
 y = a x +b
