@@ -3,10 +3,12 @@
 # gaussian distribution, normal distribution
 我們要先來回憶常態分佈 <br>
 
-機率密度函數probability density function (pdf)
+機率密度函數probability density function （pdf）
+
 $$
 f(x) = \frac{1}{ \sigma \sqrt{2 \pi}} \exp \Big ( -\frac{1}{2} (\frac{x-\mu}{\sigma})^2 \Big )
 $$
+
 其中的 $\mu$ 是 mean ， $\sigma$ 是 standard deviation。 
 
 
@@ -42,7 +44,7 @@ plt.show()
 
 # Bayesian Regression
 
-我們已經很熟悉 Linear Regression 了，我們用比較不精確的方法解釋 Bayesian Regression。
+現在我們已經很熟悉 Linear Regression 了，我們用比較不精確的方法解釋 Bayesian Regression。
 
 $$
 \min_w \sum_i \| y_i -N(f_w(x_i), \sigma^2) \|_2^2
@@ -106,10 +108,10 @@ print("Mean squared error: %.2f" % mean_squared_error(y_test, y_pred))
 ```
 
 
-# Automatic Relevance Determination(ARD)
+# Automatic Relevance Determination （ARD）
 
 前面提到 Bayesian Regression 的 $\sigma$ 都是相同的，
-我們很自然還有另外一個想法，能不能不同 wight $w_i$ 自動去選不同的 $\sigma_i$，答案是可以的。
+我們很自然會興起另一個想法，能不能不同 wight $w_i$ 自動去選取不同的 $\sigma_i$，答案是可以的。
 
 
 

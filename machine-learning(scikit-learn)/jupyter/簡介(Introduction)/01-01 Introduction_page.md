@@ -148,7 +148,7 @@ MathJax.Hub.Config({
 人工智慧是最大的集合，機器學習只是人工智慧的一個獨立分支，他是關於開發具有自我學習能力的演算法，也是這次課程我們主要關注的部分， 
 深度學習是現在很紅的應用項目，我們這堂課也會提到一些基礎的部分，更深入的進階內容就期待以後有機會開課分享。<br>
 
-人工神經元(artificial neuron)的定義是參考人類的神經元給定的，我們下面來看看定義。
+人工神經元 （artificial neuron） 的定義是參考人類的神經元給定的，我們下面來看看定義。
 
 
 
@@ -164,7 +164,7 @@ z= w_1 x_1 + \cdots + w_n x_n
 $$
 
 我們腦中也常常會自動忽略我們不在意的訊號(例如你老闆的叫聲)，也會自動加強你在意的訊號(例如你男女朋友的呼喚)。 <br>
-第二步就是根據這些訊號，我們決定要不要被激活，如果 $z$ 大於例如 $0.5$ 就被激活，小於 $0.5$ 就不被激活，這其實就叫做邏輯回歸 (logistic regression) 我們以後會提到。 <br>
+第二步就是根據這些訊號，我們決定要不要被激活，如果 $z$ 大於例如 $0.5$ 就被激活，小於 $0.5$ 就不被激活，這其實就叫做邏輯回歸 （logistic regression） 我們以後會提到。 <br>
 深度學習就是把很多神經元疊加起來去做分析判斷的技術。
 
 
@@ -174,11 +174,11 @@ $$
 # 機器學習
 
 我們先來看看幾種類型的機器學習: 
-* 監督學習 (supervised learning)
-* 非監督學習 (unsupervised learning)
-* 強化學習 (reinforcement learning)
-* 半監督學習 (semi-supervised learning)
-* 自監督學習 (self-supervised learning)
+* 監督學習 （supervised learning）
+* 非監督學習 （unsupervised learning）
+* 強化學習 （reinforcement learning）
+* 半監督學習 （semi-supervised learning）
+* 自監督學習 （self-supervised learning）
 
 
 
@@ -186,15 +186,15 @@ $$
 
 # Supervised Learning (監督學習)
 ## **定義**
-所有的資料（訓練資料，驗證資料，測試資料）都被「標註」(label)，告訴模型相對應的值，以提供機器學習在訓練模型，驗證模型時判斷預測與標註的差異。
+所有的資料（訓練資料，驗證資料，測試資料）都被「標註」 （label），告訴模型相對應的值，以提供機器學習在訓練模型，驗證模型時判斷預測與標註的差異。
 
 ## **更多的碎碎念**
-你知道機器學習（Machine Learning）可以分為幾類嗎？根據資料被標記的狀態可以分為下面幾種
-* 監督式學習 (Supervised Learning) <br>
+你知道機器學習 （Machine Learning） 可以分為幾類嗎？根據資料被標記的狀態可以分為下面幾種
+* 監督式學習 （Supervised Learning） <br>
 監督學習通常分為分類與回歸兩類問題，我們之後要講的好用工具 scikit-learn 
 常見算法有決策樹（Decision Tree， DT）、支持向量機（Support Vector Machine， SVM）和神經網絡等。
-* 非監督式學習 (Unsupervised Learing) 
-* 增強式學習 (Reinforcement Learning)
+* 非監督式學習 （Unsupervised Learing） 
+* 增強式學習 （Reinforcement Learning）
 
 我們在以後還會看到更多分類，例如自監督學習（Self-Supervised Learning）[參考範例](https://github.com/facebookresearch/dino)
 
