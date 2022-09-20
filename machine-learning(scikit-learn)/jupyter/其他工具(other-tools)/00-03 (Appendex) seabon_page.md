@@ -12,7 +12,8 @@ MathJax.Hub.Config({
 
 # seabon
 
-seabon 是以 matplotlib 為底層的高階繪圖套件，下面會以 Iris 鳶尾花資料 為範例，來看 seaborn 怎麼用。
+seabon 是以 matplotlib 為底層的高階繪圖套件，下面會以 Iris 鳶尾花資料 為範例，
+來看看 seaborn 是怎麼用的。
 
 
 
@@ -57,7 +58,9 @@ plt.show()
 ```
 
 
-下面用 seabon 跟 subplots 展示 多圖，還有 kde (Kernel Density Estimation) 是核密度估計屬於非參數檢驗方法。
+下面用 seabon 跟 subplots 展示 多個子圖，
+還有 kde （Kernel Density Estimation） 是核密度估計屬於非參數檢驗方法。
+
 
 
 ```python 

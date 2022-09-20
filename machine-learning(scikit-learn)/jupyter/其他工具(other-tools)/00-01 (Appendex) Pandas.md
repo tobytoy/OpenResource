@@ -2,7 +2,7 @@
 
 # Pandas
 
-Pandas 是 python 的 library 用來處理資料分析，如果現在你對 pandas 一無所知，你可以把 pandas 想成 Excel。 <br>
+Pandas 是 python 的 library 用來處理資料分析，如果你對 pandas 尚一無所知，你可以把 pandas 想像成 Excel。 <br>
 
 在開始前，需要提一些 pandas 的好用資源。
 * 有提供很好的 [Cheat Sheet](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf) 。
@@ -12,16 +12,16 @@ Pandas 是 python 的 library 用來處理資料分析，如果現在你對 pand
 
 
 
-第一步，我們先看 pandas 怎的讀取 csv。
+第一步，我們先瞭解 pandas 怎麼讀取 csv。
 
 - ```pd.read_csv(filename, parse_dates, index_col)``` ([docs](https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html))
     - ```filename```: 檔案位置
-    - ```parse_dates=True```: 如果是 True -> 試著去解析文件 (預設是 False，因為可以加快文件載入速度) [更多參考](http://hshsh.me/post/2016-04-12-python-pandas-notes-01/)
+    - ```parse_dates=True```: 如果是 True -> 試著去解析文件 （預設是 False，因為可以加快文件載入速度） [更多參考](http://hshsh.me/post/2016-04-12-python-pandas-notes-01/)
     - ```index_col=0```: 設定 index 為第 0 列
 
 下面簡單介紹一下 CSV。
 
-### CSV(Comma-Separated Values)，逗號分隔值
+### CSV （Comma-Separated Values），逗號分隔值
 例如
 * cat,1,2,3
 * dog,2,3,4
@@ -46,7 +46,8 @@ print('資料的shape: ', data.shape, ' 資料的 length: ', len(data))
 
 ## Index and columns
 * ```.index```: 回傳 index
-* ```.columns```: 回傳每個 列 (column) 的名子。
+* ```.columns```: 回傳每個 列 （column） 的名字。
+
 
 
 ```python 
@@ -80,11 +81,12 @@ data.dtypes
 ```
 
 
-## 列與行的切片(Slicing rows and columns)
+## 列與行的切片 （Slicing rows and columns）
 - ```data['Close']```: 取出 'Close' 那一列
 - ```data[['Open', 'Close']]```: 取出多列
 - ```data.loc['2020-05-01':'2021-05-01']```: 取出 2020-05-01 到 2021-05-01 的那幾行
 - ```data.iloc[50:55]```: 取出 50 到 55 的那幾行，如果你不知道 index 的話可以用這個方法。
+
 
 
 ```python 
@@ -159,7 +161,7 @@ data.High.mean()
 ```
 
 
-# 分群(grouping) 與 排序(sorting)
+# 分群 （grouping） 與 排序 （sorting）
 
 
 

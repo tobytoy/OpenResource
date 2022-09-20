@@ -10,7 +10,8 @@ MathJax.Hub.Config({
 
 
 
-今天會介紹兩個方法去做存檔讀檔， ```pickel``` 跟 ```joblib```。
+今天會介紹存檔、讀檔的兩個方法， ```pickel``` 跟 ```joblib```。
+
 
 
 ```python 
@@ -52,7 +53,8 @@ print('classifier load pred:', classifier_load.predict(X[0:10]))
 ```
 
 
-下面示範 joblib
+下面示範的是 joblib
+
 
 
 ```python 
@@ -95,14 +97,14 @@ print('classifier load pred:', classifier_load.predict(X[0:10]))
 ```
 
 
-scikit learn 官方是推薦使用 joblib，
-官方提到 joblib 比 pickel 更高效，對於大的 numpy 陣列更好。
+scikit learn 官方是推薦大家使用 joblib，
+官方提到 joblib 比 pickel 更高效，尤其對於大的 numpy 陣列更為好用。
 
 
 
 
 # scikit learn onnx
 
-下面要介紹怎麼把你的模型轉為 onnx
+下面課程要介紹怎麼把你的模型轉為 onnx
 
 
