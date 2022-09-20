@@ -146,8 +146,11 @@ path_dictionary = dict()
 path_dictionary['root'] = Path('../../statistics/jupyter/基礎統計(basic)/')
 path_dictionary['list'] = [
                 'basic-01.ipynb',
+                'MonteCarlo(隨機模擬).ipynb'
                 ]
 path_dictionary_list.append(path_dictionary)
+
+
 
 
 

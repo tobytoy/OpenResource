@@ -1,31 +1,6 @@
-這邊紀錄基本的統計知識與符號。
+# 推薦的學習路線
 
-# Expected value 期望值
+## 入門
 
-$$
-E[X] = \mu
-$$
-
-# Standard Deviance 標準差
-
-$$
-\sigma
-$$
-
-# Variance 變異數，方差
-
-$$
-V[X]=\sigma^2 = E[(X-\mu)^2]
-$$
-
-# Skewness 偏態
-
-判斷 分布 是左偏還是右偏
-
-# Kurtosis 峰度
-
-判斷 分布 是高還是矮
-
-## 常態分佈
-
-常態的 sk=0, ku=3
+- 基礎統計 [Basic](%E5%9F%BA%E7%A4%8E%E7%B5%B1%E8%A8%88(basic)/basic-01_page)
+- [MonteCarlo](%E5%9F%BA%E7%A4%8E%E7%B5%B1%E8%A8%88(basic)/MonteCarlo(%E9%9A%A8%E6%A9%9F%E6%A8%A1%E6%93%AC)_page)
