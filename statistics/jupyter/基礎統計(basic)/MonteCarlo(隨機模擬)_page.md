@@ -127,10 +127,3 @@ print('你獲勝機率:\t', accuracy_score(car_number, your_new_choose))
 
 
 
-
-
-```python 
-https://wiki.mbalib.com/zh-tw/%E8%92%99%E7%89%B9%E5%8D%A1%E7%BD%97%E6%96%B9%E6%B3%95
-http://www.ablmcc.edu.hk/~scy/cprogram/Monte-Carlo.pdf
-https://zh.wikipedia.org/zh-tw/%E8%92%99%E5%9C%B0%E5%8D%A1%E7%BE%85%E6%96%B9%E6%B3%95
-```
