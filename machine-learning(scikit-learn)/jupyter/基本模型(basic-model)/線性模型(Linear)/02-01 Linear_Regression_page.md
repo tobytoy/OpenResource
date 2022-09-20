@@ -342,8 +342,8 @@ print("Mean squared error: %.2f" % mean_squared_error(y_test, y_pred))
 
 
 # Multi-task Lasso
-這邊再介紹 多任務(Multi-task) Lasso，他適合估計稀疏係數(```sparse coefficients```)的多回歸問題，
-要解的問題的 $y$ 是 $2$ 維的array，形狀(shape)是 $(n_samples, n_tasks)$。 <br>
+這邊再介紹 多任務 ( Multi-task ) Lasso，他適合估計稀疏係數 ( ```sparse coefficients``` ) 的多回歸問題，
+要解的問題的 $y$ 是 $2$ 維的array，形狀(shape)是 $( n_{samples}, n_{tasks} )$。 <br>
 
 我們這邊還是要寫一下數學阿宅的語言。
 
@@ -359,7 +359,7 @@ $$
 
 
 ## Multi-task
-這邊多提一下什麼是多任務，有多個預測輸出，但是他們選用相同的特徵(features)，
+這邊多提一下什麼是多任務，有多個預測輸出，但是他們選用相同的特徵 ( features )，
 那麼這種任務就是多任務，這種要求在 Deep learning 也是很常見的任務類型，
 例如看一個人的照片，預測他的性別、年齡、人種、心情等等。多任務的更詳細的內容請移駕 輸出 多任務的部分。
 
