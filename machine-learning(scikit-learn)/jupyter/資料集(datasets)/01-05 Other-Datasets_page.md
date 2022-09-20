@@ -12,13 +12,14 @@ MathJax.Hub.Config({
 
 # Online Other Dataset
 
-現在網路這麼發達，有很多公開的資料，下面一一介紹。
+現在網路資訊這麼豐富，有很多公開的資料可加以利用，下面大致介紹一些知名的資料庫。
+
 
 ## Open Dataset 集散地
 
 ### [Kaggle](https://www.kaggle.com/datasets)
 
-Kaggle 世界最大的資料科學社群之一，在 Kaggle 上有各種資料分析的比賽可以參加，所以可以在上面拿到許多資料。
+Kaggle 是世界最大的資料科學社群之一，在 Kaggle 上有各種資料分析的比賽可以參加，所以可以在上面拿到許多資料。
 
 ### [Google dataset search](https://datasetsearch.research.google.com/)
 
@@ -42,14 +43,15 @@ Google 提供的資料，可以幫助研究人員查找免費提供的在線數�
 
 ### [wiki](https://en.wikipedia.org/wiki/List_of_datasets_for_machine-learning_research)
 
-危機百科(大家在用wiki的時候都要有危機意識)，某些人蒐集的數據。
+維基百科是開放資料集，大家在用wiki的時候都要有危機意識，這是一般人都可蒐集提供的數據，真偽參半不可盡信。
 
 
 ## Public Government Datasets 政府公開的數據
 
 ### [data.gov](https://catalog.data.gov/dataset)
 
-美國政府的開放數據網站，有醫療保健、氣候、教育等各個行業對其進行過濾。
+美國政府的開放數據網站，資料龐雜有醫療保健、氣候、教育等各個行業，我們可針對需求對其進行搜尋過濾。
+
 
 ### [EU Open Dataset](https://data.europa.eu/data/datasets?locale=en)
 

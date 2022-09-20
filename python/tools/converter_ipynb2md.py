@@ -92,8 +92,10 @@ path_dictionary = dict()
 path_dictionary['root'] = Path('../../machine-learning(scikit-learn)/jupyter/基本模型(basic-model)/隨機梯度下降(stochastic-gradient-descent)/')
 path_dictionary['list'] = [
                 '05_01 Stochastic_Gradient_Descent.ipynb',
+                '05_02 SGD_Clf_Reg.ipynb'
                 ]
 path_dictionary_list.append(path_dictionary)
+
 
 
 # 基本模型 的 NearestNeighbors

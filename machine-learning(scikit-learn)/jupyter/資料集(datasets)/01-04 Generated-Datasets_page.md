@@ -10,7 +10,7 @@ MathJax.Hub.Config({
 
 
 
-當我們需要更大量的資料來測試的時候，我們可以使用 scikit learn 提供的自動生成數據。
+當我們需要更大量的資料來做測試的時候，我們可以使用 scikit learn 提供的自動生成數據。
 
 # Generated datasets 生成的數據集
 
@@ -39,7 +39,7 @@ MathJax.Hub.Config({
 - make_swiss_roll
 
 
-因為使用方法很類似我們來看幾個實際使用範例。
+因為使用方法很類似我們來看幾個實際使用的範例。
 
 
 

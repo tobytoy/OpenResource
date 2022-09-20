@@ -18,14 +18,17 @@ MathJax.Hub.Config({
 
 # Simple regression
 
-線性回歸(Linear regresion) 是 監督學習(supervised learning)，最簡單的線性回歸稱為簡單回歸(Simple regression)，
+線性回歸 (Linear regresion) 是 監督學習 (supervised learning)，
+最簡單的線性回歸稱為簡單回歸 (Simple regression)，
+
 $$
 y = a x +b
 $$
+
 $x$ 是輸入，$y$ 是輸出。
 
 
-我們先來看一個栗子，假設三個人
+我們先來看一個例子，假設三個人
 
 | **姓名** | **性別** | **年紀** | **身高** |
 | :----: | :----: | :----: | :----: |
@@ -33,14 +36,16 @@ $x$ 是輸入，$y$ 是輸出。
 | 小明 | 男 | 6 | $55$ |
 | 小呆 | 男 | 7 | $59$ |
 
-如果我們想要估計他們的身高經由年紀去估計，因該怎麼估計阿。
+
+如果我們想要經由年紀去估計他們的身高，應該怎麼進行阿。
+
 
 
 
 ## 參考答案
-身高 ~ $25 +$年紀 X $5$ <br>
+身高 ~ $25 +$ 年紀 X $5$ <br>
 
-下面我們用視覺來看這個問題，用一條直線來估計
+下面我們用視覺分析看這個問題，用一條直線來估計
 
 
 $$
@@ -50,6 +55,7 @@ $$
 其中 $a$ 是斜率 *slope*, $b$ 是截距 *intercept*。 <br>
 
 下面要考慮
+
 $$
 y = 5 x + 25
 $$
@@ -73,7 +79,7 @@ plt.scatter(x, y)
 ```
 
 
-我們下面要用 Scikit-Learn 的 Linear Regression 去找一條最符合的線。
+我們下面要用 Scikit-Learn 的 Linear Regression 去找出一條最符合的線。
 
 
 ```python 
@@ -94,7 +100,7 @@ plt.plot(xfit, yfit)
 
 下面我們要抽象的處理這類問題。 <br>
 
-假設 $y$ 是目標要預測的值，$X$ 是我們用來估計 $y$。 <br>
+假設 $y$ 是目標要預測的值， $X$ 是我們用來估計 $y$。 <br>
 現在的目標就是找出線性函數 $\hat{y}$ 去逼近 $y$
 
 $$
@@ -104,34 +110,42 @@ $$
 \end{align}
 $$
 
-我們先假設符號
+我們先定義符號
 
 $$
 w = (w_1, ⋯ ,w_n)
 $$
+
 叫 coefficients 係數 （ 程式裡叫 coef_ ）, 
 另外 $w_0$ 叫 intercept 截距 （ 程式裡叫 intercept_ ）。
 
 ## 數學阿宅的語言
 我們所要解的問題如果用矩陣表示，
+
 $$
 \min_w \| wX -y \|_2^2
 $$
+
 如果用函數表示，
+
 $$
 \min_w \| f_w^{linear}(X) - y \|_2^2
 $$
 
 ## 筆記 norm
-假設 $ v = (v_1, \cdots, v_n)$ 
+假設 $v=(v_1, \cdots, v_n)$ 
 * one norm
+
 $$
 \| v \|_1 = \sum_{i=1}^n |v_i|
 $$
+
 * two norm
+
 $$
 \| v \|_2 = \sqrt{\sum_{i=1}^n v_i^2}
 $$
+
 我們等一下介紹更多模型的時候會需要這些知識。
 
 ## 下面我們來看其他例子
@@ -196,11 +210,13 @@ print("Mean squared error: %.2f" % mean_squared_error(y_test, y_pred))
 
 # Ridge Regression, Lasso and Elastic-Net
 
-我們前面提過了 over fitting 的問題，大家還記得嗎，那怎麼樣的模型會被認為是不容易 over fitting? <br>
-答案是不複雜的模型，那對於不同演算法來說，複雜不複雜的概念是不同的，我們現在面對的是線性模型，所以我們就專注來看線性模型，我們會認為線性模型前面的係數
+我們前面提過了 over fitting 的問題，大家還記得嗎? 那怎麼樣的模型才會被認為是不容易 over fitting? <br>
+答案是不複雜的模型，那對於不同演算法來說，複雜或不複雜的概念是不同的，我們現在面對的是線性模型，所以我們就專注來看線性模型，我們會認為線性模型前面的係數
+
 $$
 w = (w_1, ⋯ ,w_n)
 $$
+
 沒錯就是 $w$ 如果不大，那代表模型不複雜。
 
 
@@ -209,24 +225,30 @@ $$
 - Elastic-Net 其實就是 迴歸 + 係數 1-norm 不要太大 + 係數 2-norm 不要太大
 
 
-
 ## 數學阿宅的語言
 - Ridge Regression
+
 $$
 \min_w \| wX -y \|_2^2 + \alpha \| w \|_2^2
 $$
+
 - Lasso
+
 $$
 \min_w \| wX -y \|_2^2 + \alpha \| w \|_1
 $$
+
 - Elastic-Net
+
 $$
 \min_w \| wX -y \|_2^2 + \alpha \Big (\rho \| w \|_1 + (1-\rho) \| w \|_2^2 \Big )
 $$
+
 where $\alpha > 0, \rho \in [0, 1]$.
 
 
 下面開始實戰。
+
 
 
 
@@ -258,10 +280,11 @@ print("Mean squared error: %.2f" % mean_squared_error(y_test, y_pred))
 # Ridge Classification
 下面介紹 Ridge 怎麼做分類，剛剛不是才教做 regression。
 
-- 我們先假設只有一類 "貓貓"，答案只有是貓貓或不是貓貓，把她的答案轉為 $+1$ 或 $-1$，根據他是不是貓貓。
-- 那我們就可以做回歸用 Ridge Regression。
+- 我們先假設只有一類 "貓貓"，答案只有是貓貓或不是貓貓，把她的答案轉為 $+1$ 或 $-1$ ，根據他是不是貓貓。
+- 那我們就可以用 Ridge Regression 做回歸。
 - 如果輸出的預測大於 $0$，則預測是貓貓，如果小於 $0$ 預測不是貓貓。
-- 如果有很多類別 scikit learn 有提供多類別的外殼 OneVsRestClassifier，我們可以先跳轉過去，以後會再詳細說，現在可以先假設這是可以的。
+- 如果有很多類別 scikit learn 也有提供多類別的外殼 OneVsRestClassifier，
+目前我們先暫且跳過去，以後會再詳細說明，現在先假設這是可以的。
 
 下面開始實戰。
 
@@ -319,24 +342,32 @@ print("Mean squared error: %.2f" % mean_squared_error(y_test, y_pred))
 
 
 # Multi-task Lasso
-這邊再介紹 多任務(Multi-task) Lasso，他適合估計稀疏係數(```sparse coefficients```)的多回歸問題，要解的問題的 $y$ 是 $2$維的array，形狀(shape)是 $(n_samples, n_tasks)$。 <br>
+這邊再介紹 多任務(Multi-task) Lasso，他適合估計稀疏係數(```sparse coefficients```)的多回歸問題，
+要解的問題的 $y$ 是 $2$ 維的array，形狀(shape)是 $(n_samples, n_tasks)$。 <br>
 
-我們這邊還是要寫一下數學啊宅的語言。
+我們這邊還是要寫一下數學阿宅的語言。
+
 $$
 \min_w \| wX -y \|_{Fro}^2 + \alpha \| w \|_{21}
 $$
+
 其中
+
 $$
 \| w \|_{Fro} := \sqrt{\sum_{i,j} w_{ij}^2} , \hspace{1cm} \| w \|_{21} := \sum_i \sqrt{ \sum_{j} w_{ij}^2 }
 $$
 
 
-
 ## Multi-task
-這邊多提一下什麼是多任務，有多個預測輸出，但是他們選用相同的特徵(features)，那麼這種任務就是多任務，這種要求在 Deep learning 也是很常見的任務類型，例如看一個人的照片，預測他的性別、年齡、人種、心情等等。多任務的更詳細的內容請移駕 輸出 多任務的部分。
+這邊多提一下什麼是多任務，有多個預測輸出，但是他們選用相同的特徵(features)，
+那麼這種任務就是多任務，這種要求在 Deep learning 也是很常見的任務類型，
+例如看一個人的照片，預測他的性別、年齡、人種、心情等等。多任務的更詳細的內容請移駕 輸出 多任務的部分。
 
 
-下面我們可以比較一下 Lasso 與 Multi-task Lasso，我們可以看到 Multi-task Lasso 非$0$的係數比 Lasso 多，這也表明 Multi-task Lasso 的方法訓練的模型會比較活躍。
+下面我們可以比較一下 Lasso 與 Multi-task Lasso，
+我們可以看到 Multi-task Lasso 非 $0$ 的係數比 Lasso 多，
+這也表明 Multi-task Lasso 的方法訓練的模型會比較活躍。
+
 
 
 
@@ -463,5 +494,6 @@ print("Mean squared error: %.2f" % mean_squared_error(y_test, y_pred))
 ```
 
 
-# 你太棒了! 你辦到了! 感覺如何阿，當你覺得可以的時候可以進入下一個階段。
+
+# 太棒了! 你也辦到了! 感覺如何啊，當你覺得可以的時候我們可以一起進入下一個階段。
 
