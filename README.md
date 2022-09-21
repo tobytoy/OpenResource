@@ -3,7 +3,7 @@
 - 本站首頁 : [Web Site](https://tobytoy.github.io/OpenResource/)
 
 - 機器學習 : [Machine Learning](https://tobytoy.github.io/OpenResource/machine-learning(scikit-learn)/)
-- 機器學習歷史 : [ML History](https://tobytoy.github.io/OpenResource/machine-learning(scikit-learn)/jupyter/簡介(Introduction)/)
+- 推薦機器學習的學習路線 : [Learning Path](https://tobytoy.github.io/OpenResource/machine-learning(scikit-learn)/jupyter/learning_paths)
 - 統計 : [Statistics](https://tobytoy.github.io/OpenResource/statistics/)
 - 基礎統計 : [Basic Statistics Knowledge](https://tobytoy.github.io/OpenResource/statistics/jupyter/基礎統計(basic)/)
 - 深度學習 : [Deep Learning](https://tobytoy.github.io/OpenResource/deep-learning/)
