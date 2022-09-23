@@ -309,10 +309,15 @@ for clf in models:
 
 ![boosting](../../images/boosting_method.drawio.png)
 
+下面用程式看一下，但是與實際 boosting 的做法有差別，
+例如 adaboost ，他就是調低答對的 weight，調高答錯的weight，交給下一棒。
+(這邊先不用在意，跟投資理財的投資有風險，有賺有賠請詳閱公開說明書一樣的註解。)
+
 
 
 
 ```python 
+
 # 可以答對的機率
 q = 0.5 + 0.00001
 # 錯誤的機率
