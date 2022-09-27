@@ -1,7 +1,6 @@
 
 機器學習首頁 : [Machine Learning](https://tobytoy.github.io/OpenResource/machine-learning(scikit-learn)/)
 
-
 # 推薦的學習路線
 
 ## 入門
@@ -27,8 +26,6 @@
 - Python 的高階視覺化 [Seabon](%E5%85%B6%E4%BB%96%E5%B7%A5%E5%85%B7(other-tools)/00-03%20(Appendex)%20seabon_page)
 - 存檔讀檔 [Save_Load](%E5%85%B6%E4%BB%96%E5%B7%A5%E5%85%B7(other-tools)/00-04%20(Appendex)%20Save_Load_page)
 
-
-
 ## 簡易貝氏
 
 - 貝氏定理 [Bayes Theory](%E5%9F%BA%E6%9C%AC%E6%A8%A1%E5%9E%8B(basic-model)/%E8%B2%9D%E6%B0%8F(bayes)/03_01%20Bayes_Theory_page)
@@ -39,16 +36,20 @@
 - 支持向量機 [SVM](%E5%9F%BA%E6%9C%AC%E6%A8%A1%E5%9E%8B(basic-model)/%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%A9%9F(SVM)/04_01%20Support_Vector_Machines_page)
 - 核函數 [kernel](%E5%9F%BA%E6%9C%AC%E6%A8%A1%E5%9E%8B(basic-model)/%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%A9%9F(SVM)/04_02%20SVM_Kernel_Trick_page)
 
+## 輸出
+
+- [多類、多標籤、多輸出](%E8%BC%B8%E5%87%BA(output)/multi-class_multi-label_multi-task_page)
+
+## SGD
+
+- [SGD](%E5%9F%BA%E6%9C%AC%E6%A8%A1%E5%9E%8B(basic-model)/%E9%9A%A8%E6%A9%9F%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D(stochastic-gradient-descent)/05_01%20Stochastic_Gradient_Descent_page)
+
 ## 評價指標
 
 - metrices [簡介](%E8%A9%95%E5%83%B9%E6%8C%87%E6%A8%99(metrics)/introduce_page)
 - metrices [分類](%E8%A9%95%E5%83%B9%E6%8C%87%E6%A8%99(metrics)/metrics_classification_page)
 - metrices 回歸
 - metrices 分群
-
-## SGD
-
-- [SGD](%E5%9F%BA%E6%9C%AC%E6%A8%A1%E5%9E%8B(basic-model)/%E9%9A%A8%E6%A9%9F%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D(stochastic-gradient-descent)/05_01%20Stochastic_Gradient_Descent_page)
 
 # 好鄰居
 
