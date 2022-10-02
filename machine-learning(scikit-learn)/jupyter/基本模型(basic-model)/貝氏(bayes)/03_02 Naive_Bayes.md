@@ -280,6 +280,30 @@ print(train.data[5])
 我們會用 [TF-IDF](https://zh.m.wikipedia.org/zh-tw/Tf-idf) 特徵。
 
 
+## Term Frequency - Inverse Document Frequency
+
+他是由兩個部分組成詞頻（term frequecny, tf）與逆向文件頻率（inverse document frequency, idf）
+
+
+### Term Frequency
+
+$$
+tf(t,d) = \frac{f_{t,d}}{ \sum_{t' \in d} f_{t',d}}
+$$
+
+上面的 $f_{t,d}$ 表示單詞 $t$ 在文件 $d$ 當中的次數，我們可以由公式看出來詞頻就是單詞出現在一份文件的頻率。
+
+
+### Inverse Document Frequency
+
+$$
+idf(t,D) = \ln \Big ( \frac{｜D｜}{ 1 + ｜\{ d \in D : t \in d \}｜} \Big )
+$$
+
+上面 $D$ 表示語料庫，其元素為文件 $d$，由上面公式可以知道，若某個單詞愈是集中出現在某幾份文件中，則 idf 就愈大，其之於整個語料庫而言就愈重要。
+反之，當某個單詞在大量文件中都出現，idf 就愈小，我們會認為這個單詞愈是一般。
+
+
 
 
 ```python 
@@ -314,6 +338,7 @@ from sklearn.metrics import confusion_matrix
 import seaborn as sns
 import matplotlib.pyplot as plt
 %matplotlib inline
+
 plt.rcParams['figure.figsize'] = [15, 15]
 
 matrix = confusion_matrix(y_test, y_pred)
@@ -323,9 +348,3 @@ plt.xlabel('true label')
 plt.ylabel('predicted label')
 
 ```
-
-
-## Term Frequency - Inverse Document Frequency
-
-
-
