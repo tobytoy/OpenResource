@@ -12,9 +12,9 @@ MathJax.Hub.Config({
 
 # Motivation
 
-假設你所待的公司研發一款新泡麵，在公司裡面做了多次煮泡麵測試數據如下，
+假設你的公司研發出一款新泡麵產品，在公司裡面做了多次煮泡麵測試，其數據如下，
 
-| 煮麵員 | 煮的時間 | 試吃員 | 評價 |
+| 煮麵員 | 烹煮時間 | 試吃員 | 評價 |
 | :----:| :----: | :----: | :----: |
 | 小美 | 5 | 小呆 | 難吃 |
 | 小美 | 10 | 小美 | 好吃 |
@@ -23,25 +23,27 @@ MathJax.Hub.Config({
 | 小呆 | 8 | 小萌 | 可以吃 |
 | 小呆 | 13 | 小美 | 可以吃 |
 
-做完以後公司要求你寫說明書，去給可愛的客戶看，大家都知道客戶是什麼都不會的，你因該建議你的客戶煮多久的泡麵阿? <br>
-大家都知道客戶在煮麵的時候有很多干擾，像是可能要跑出去接電話，也可能等不急肚子太餓，所以你會建議你的客戶大大煮多久的泡麵阿，7分鐘? 還是13分鐘?
+做完實驗以後公司要求你撰寫一份說明書，去給可愛的客戶看，大家都知道一般客戶是沒什麼概念的，你應該建議客戶要煮多久時間的泡麵呢? <br>
+大家都知道客戶在煮麵的時候可能會有很多干擾，像是跑出去接電話，也可能肚子太餓等不及，所以你覺得要怎麼建議你的客戶煮麵時間他才會滿意，是7分鐘? 還是13分鐘?
 
 
 
 
 
-# Support vector machine(SVM)
+# Support vector machine （SVM）
 
-Support vector machine 中文叫 "支持向量機"，不管中文或英文都太長太難唸了，所以我以下都會簡稱 ```SVM```，我們現在先來定位一下 SVM ，SVM 是監督學習的方法，可以用來做分類(classification)，回歸(regression)，也可以用來做 新奇發現。
+Support vector machine 中文叫 "支持向量機"，不管是中文或英文都太長太難唸了，所以我以下都會簡稱 ```SVM```，我們現在先來定位一下 SVM ，SVM 是監督學習的方法，可以用來做分類（classification），回歸（regression），也可以用來做 新奇發現。
+
+
 
 
 
 
 ## novelty detection
 
-他的叫法有很多 anomaly detection, novelty detection, outliers detection，因為deep learning的興起，所以也有人用 GAN [GANomaly 2018](https://arxiv.org/pdf/1805.06725v3.pdf) 來做這件事，實做的部分可以參考 [anomalib](https://github.com/openvinotoolkit/anomalib)，不過講這麼多都不是今天的重點，我們現在是在教ML的SVM，所以要提一下 OneClassSVM 也可以來達成這一件事。 <br>
+他的叫法有很多種， anomaly detection, novelty detection, outliers detection，因為deep learning的興起，所以也有人用 GAN [GANomaly 2018](https://arxiv.org/pdf/1805.06725v3.pdf) 來做這件事，實做的部分可以參考 [anomalib](https://github.com/openvinotoolkit/anomalib)，不過講這麼多都不是今天的重點，我們現在是在教ML的SVM，所以要提一下 OneClassSVM 也可以用來達成這一件事。 <br>
 
-我們另外還要提一件事，就是研究這個問題的動機是什麼，動機1 是他可以發現新的類別，動機2 是他可以做異常偵測，去排除故意搗亂的人。
+我們另外還要提一件事，就是要說明研究這個問題的動機是什麼，動機1 是他可以幫忙發現新的類別，動機2 是他可以做異常偵測，去排除那些想要故意搗亂的人。
 
 
 
@@ -56,7 +58,7 @@ SVM 的優點有
 
 SVM 的缺點有
 - SVM 不直接提供機率估計
-- 如果特徵(features)的數量遠大於樣本(samples)的數量，容易over-fitting，需要選擇適合的 kernel 函數 與 正規化的處理。
+- 如果特徵（features）的數量遠大於樣本（samples）的數量，容易over-fitting，需要選擇適合的 kernel 函數 與 正規化的處理。
 
 
 
@@ -81,7 +83,7 @@ plt.scatter(X[:, 0], X[:, 1], c=y, s=50, cmap='autumn')
 ```
 
 
-我們很自然地想用直線去區分開來，但是問題來了要用哪條直線?
+我們很自然地會想用直線去區分開來，但是問題來了，要用哪條直線?
 
 
 ```python 
@@ -100,7 +102,7 @@ plt.xlim(-1, 3.5)
 ```
 
 
-假設紅色 X 是新來的資料，對於舊有的資料我們上面的三條線，哪一條都可以完美的完成任務，但是對於新來的資料(紅 X)，三條線會有不同的看法，這時候 SVM 就跳出來說我們需要一點嚴謹的方法來嚴肅對待這個問題。
+假設紅色 X 是新來的資料，對於舊有資料上面的三條線，哪一條都可以完美的完成任務，但是對於新來的資料(紅 X)，三條線會有不同的看法，這時候 SVM 就跳出來說，我們需要嚴謹一點的方法來嚴肅對待這個問題。
 
 ## SVM: Maximizing the *Margin*
 SVM 就跳出來說啦，我們選的分割線可以離他們的邊界越遠越好啊。
@@ -185,7 +187,7 @@ classifier.support_vectors_
 ```
 
 
-我們接下來要進入實戰環節，看 scikit learn 裡面提供那些回歸(regression)與分類(classification)方法。
+我們接下來要進入實戰環節，看 scikit learn 裡面提供哪些回歸 （regression）與分類 （classification）方法。
 
 # Classification 
 
