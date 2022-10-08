@@ -53,7 +53,9 @@ k(x,y) =  <x,y>
 $$
 
 # Polynomial kernel
+
 $d$ 是正整數，是多項式的 degree 
+
 $$
 k(x,y) = (<x,y> + c)^d, c \geq 0
 $$
