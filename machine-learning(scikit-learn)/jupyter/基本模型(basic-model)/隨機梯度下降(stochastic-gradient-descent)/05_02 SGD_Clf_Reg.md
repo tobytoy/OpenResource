@@ -1,6 +1,7 @@
 
 
-我們下面就開始實戰
+我們下面就開始 SGD + Classifier 的實戰，
+
 
 
 ```python 
@@ -21,10 +22,15 @@ classifier.fit(X_train, y_train)
 print('Training accuracy: ', classifier.score(X_train, y_train))
 print('Testing accuracy: ', classifier.score(X_test, y_test))
 
+
 ```
 
 
-# Hinge Loss
+# Loss function
+
+scikit learn 提供了 hinge ， modified_huber 與 log 三個 loss function 可以選。
+
+## Hinge Loss
 
 hinge loss 是一個損失函數 (loss function)， hinge loss 專用於 2 分類問題。
 
@@ -32,7 +38,13 @@ $$
 l(y) = \max(0, 1 - y \cdot \hat{y})
 $$
 
+# penalty
+
+scikit learn 提供了 l1 ， l2 與 elasticnet 三個可以選。
+
+
 我們下面看看不同 iterration 的模型效果如何。
+
 
 
 ```python 
@@ -85,6 +97,7 @@ plt.title("Effect of n_iter")
 plt.xlabel("n_iter")
 plt.ylabel("score")
 plt.plot(n_iters, scores_train, 'b', n_iters, scores_test, 'r')
+
 ```
 
 
