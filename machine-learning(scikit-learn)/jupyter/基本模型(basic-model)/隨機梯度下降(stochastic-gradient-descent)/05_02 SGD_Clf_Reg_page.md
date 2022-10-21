@@ -10,7 +10,7 @@ MathJax.Hub.Config({
 
 
 
-我們下面就開始 SGD + Classifier 的實戰，
+我們下面就開始進入 SGD + Classifier 的實戰，
 
 
 
@@ -38,11 +38,11 @@ print('Testing accuracy: ', classifier.score(X_test, y_test))
 
 # Loss function
 
-scikit learn 提供了 hinge ， modified_huber 與 log 三個 loss function 可以選。
+scikit learn 提供了 hinge ， modified_huber 與 log 三個 loss function 可以選用。
 
 ## Hinge Loss
 
-hinge loss 是一個損失函數 (loss function)， hinge loss 專用於 2 分類問題。
+hinge loss 是一個損失函數 （loss function） ， hinge loss 專用於 2 分類問題。
 
 $$
 l(y) = \max(0, 1 - y \cdot \hat{y})
@@ -50,10 +50,10 @@ $$
 
 # penalty
 
-scikit learn 提供了 l1 ， l2 與 elasticnet 三個可以選。
+scikit learn 提供了 l1 ， l2 與 elasticnet 三個選項可以使用。
 
 
-我們下面看看不同 iterration 的模型效果如何。
+我們下面來看看不同 iterration 模型的效果如何。
 
 
 
