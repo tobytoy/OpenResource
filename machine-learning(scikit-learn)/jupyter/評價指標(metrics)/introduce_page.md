@@ -10,7 +10,7 @@ MathJax.Hub.Config({
 
 
 
-在 scikit-learn 裡面任務的類型可以分為 $3$ 類，Classification, Regression, Clustering，所以指標也會分為三個部分來說。
+在 scikit-learn 裡面的任務類型可以分為 $3$ 類，Classification, Regression, Clustering，所以指標也會分為三個部分來說明。
 
 
 下面列出在 scikit learn 提供的方法。
@@ -34,7 +34,7 @@ MathJax.Hub.Config({
 
 
 
-最後還會提一種特別的 Dummy 評估器，可以用來做 baseline 的值，我們廢話不多說進入 Dummy 的實戰環節。
+最後還會提及一種特別的 Dummy 評估器，可以用來做 baseline 的值，我們廢話不多說直接進入 Dummy 的實戰環節。
 
 
 
