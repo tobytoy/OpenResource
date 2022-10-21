@@ -10,14 +10,16 @@ MathJax.Hub.Config({
 
 
 
-接下來會介紹常用來處理分類問題的指標
+接下來介紹幾個常用來處理分類問題的指標
 
 # Accuracy Score 準確度
 
 不免俗的要來數學阿宅的公式
+
 $$
 accuracy(y,\hat{y}) = \frac{1}{n} \sum_{i=1}^n 1(y_i = \hat{y_i})
 $$
+
 其中的 $1( \cdot )$ 是 indicator function。 <br>
 
 下面進入實戰環節。
@@ -36,10 +38,11 @@ accuracy_score(y_true, y_pred, normalize=False)
 
 # Top-k accuracy score 前 k 高準確度
 
-正確的答案，只要在你預測的前 k 高的答案裡面就算你對，可以想成給你猜 k 次，只要猜對一次就算你答對。 <br>
+正確的答案，只要結果在預測的前 k 高的答案裡面就算你對，可以想成給你猜 k 次，只要猜對一次就算你答對。 <br>
 
-為了滿足數學阿宅的快樂，我們來定新的符號 $\hat{y}_{i,j}$ 是 預測 第 $i$ 個樣本(sample)的 第 $j$ 高分數的預測，特別的來說 $\hat{y}_{i,1} = \hat{y}_i$，
+為了滿足數學阿宅的快樂，我們來定義新的符號 $\hat{y}_{i,j}$ 是 預測 第 $i$ 個樣本(sample)的 第 $j$ 高分數的預測，特別的來說 $\hat{y}_{i,1} = \hat{y}_i$，
 下面我們就可以給公式。
+
 $$
 top-k \quad accuracy(y, \hat{y}) = \frac{1}{n} \sum_{i=1}^n \sum_{j=1}^k 1(y_i = \hat{y}_{i,j})
 $$
@@ -66,16 +69,17 @@ top_k_accuracy_score(y_true, y_score, k=2, normalize=False)
 
 # Balanced accuracy score 平衡的準確度
 
-我們前面談的都是在資料如果很平衡的情況下，那如果資料很不平衡的情況下，下面舉幾個例子感受一下。 <br>
+我們前面談的都是在資料很平衡的情況下，那如果資料很不平衡的情況下又會如何？下面舉幾個例子來感受一下。 <br>
 
-假設你要預測，今天起床看見的人是不是外星人，那你大概會無腦見人就猜他是人，雖然你預測超準但是你其實根本沒學會如何判斷是地球人還是外星人，如果你今天去 MIB 的總部，你的預測的準確度就會奇差無比。
+假設你要預測的事件，是判斷起床後看見的人是不是外星人，那你大概會無腦的見人就猜他是人嗎？雖然看上去你的預測超準，但其實你根本沒學會到底要如何去判斷是地球人還是外星人，只是在瞎猜罷了，如果你今天到了 MIB 的總部，你預測的準確度恐怕就會變得奇差無比。
 
-那在哪些狀況可能會有不平衡的問題:
+那在哪些狀況下可能會碰到不平衡的問題:
 
 - 在醫學上，大部分的人都是健康的。
-- 在工廠裡，大部分是良品。
+- 在工廠裡，大部分產品是良品。
 
-如果你用之前提到的指標準確度，那你會不知道你的模型其實啥都沒學會，下面進入實戰。
+
+如果你還在用之前提到的指標準確度，那你可能會搞不清預測結果的正確性，因為其實你的模型啥都沒學會，下面進入實戰。
 
 
 
@@ -97,7 +101,7 @@ balanced_accuracy_score(y_true, y_pred)
 
 #  Cohen’s kappa
 
-這是一種評價 兩個觀察員 的觀察 是否一致的指標，Cohen’s kappa 的值介於 $-1$ 到 $1$ 之間，只要大於 $0.8$ 就會被認為觀察一致，小於 $0$ 會被認為不一致，下面進入實戰。
+這是一種觀察指標，評價 兩個觀察員 的觀察 是否一致的指標，Cohen’s kappa 的值介於 $-1$ 到 $1$ 之間，只要大於 $0.8$ 就會被認定為觀察一致，小於 $0$ 會被認為不一致，下面進入實戰。
 
 
 
@@ -117,19 +121,19 @@ cohen_kappa_score(y_1, y_2)
 # Accuracy 準確率、 Precision 精確率、 Recall 召回率、 F-score
 
 
-為了要解釋這些概念我們來個二分類的看病問題，
+為了要解釋這些概念，我們來個二分類的看病問題例子，
 
 
-|  真實 \  預測 | **有病** (<font color=Blue>positive</font>) | **沒病** (negative) |
+|  真實 \  預測 | **有病** （<font color=Blue>positive</font>） | **沒病** （negative） |
 | :-----: | :----: | :----: |
-| **有病** | TP (true <font color=Blue>positive</font>) <br> 判斷是對的 有病 | FN (<font color=Red>false</font> negative) <br> 判斷是錯的 沒病 |
-| **沒病** | FP (<font color=Red>false</font> <font color=Blue>positive</font>) <br> 判斷是錯的 有病 | TN (true negative) <br> 判斷是對的 沒有病 |
+| **有病** | TP （true <font color=Blue>positive</font>） <br> 判斷是對的 有病 | FN （<font color=Red>false</font> negative） <br> 判斷是錯的 沒病 |
+| **沒病** | FP （<font color=Red>false</font> <font color=Blue>positive</font>） <br> 判斷是錯的 有病 | TN （true negative） <br> 判斷是對的 沒有病 |
 
 
-在統計上我們有一些其他稱呼，
+在統計上我們有一些其他的稱呼，
 
-### FP (false positive) : 偽陽，型一錯誤
-### FN (false negative) : 偽陰，型二錯誤
+### FP （false positive） : 偽陽，型一錯誤
+### FN （false negative） : 偽陰，型二錯誤
 
 我們下面用這些新概念來解釋
 
