@@ -83,9 +83,19 @@ print('準確度: ', accuracy_score(y_true, y_pred), '平衡的準確度: ', bal
 y_true = [0, 0, 0, 0, 0, 0, 1, 2]
 y_pred = [0, 0, 0, 1, 0, 0, 1, 2]
 
-# 1/3+1/3+5/6*1/3
+# 1/3 + 1/3 + 5/6*1/3
 balanced_accuracy_score(y_true, y_pred)
 
+```
+
+
+```python 
+1/3 + 1/3 + 5/6*1/3
+```
+
+
+```python 
+??balanced_accuracy_score
 ```
 
 
@@ -93,6 +103,11 @@ balanced_accuracy_score(y_true, y_pred)
 
 這是一種觀察指標，評價 兩個觀察員 的觀察 是否一致的指標，Cohen’s kappa 的值介於 $-1$ 到 $1$ 之間，只要大於 $0.8$ 就會被認定為觀察一致，小於 $0$ 會被認為不一致，下面進入實戰。
 
+他的公式是
+
+$$
+\frac{p_o - p_e}{1 - p_e}
+$$
 
 
 
@@ -105,6 +120,16 @@ y_2 = [0, 2, 0, 2, 2, 0, 0, 1]
 
 cohen_kappa_score(y_1, y_2)
 
+```
+
+
+```python 
+cohen_kappa_score(y_2, y_1)
+```
+
+
+```python 
+??cohen_kappa_score
 ```
 
 

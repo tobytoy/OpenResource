@@ -87,6 +87,7 @@ print('Testing accuracy: ', classifier.score(X_test, y_test))
 
 ```python 
 from sklearn.datasets import make_blobs
+import matplotlib.pyplot as plt
 
 X, y = make_blobs(100, 2, centers=2, random_state=2, cluster_std=1.5)
 
@@ -236,6 +237,7 @@ classifier.fit(X_train, y_train)
 
 print('Training accuracy: ', classifier.score(X_train, y_train))
 print('Testing accuracy: ', classifier.score(X_test, y_test))
+
 ```
 
 
