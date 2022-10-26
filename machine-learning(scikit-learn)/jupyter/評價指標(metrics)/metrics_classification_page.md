@@ -275,3 +275,24 @@ target_names = ['cat', 'dog', 'pig']
 print(classification_report(y_true, y_pred, target_names=target_names))
 
 ```
+
+
+這邊要特別說明一下 Macro Average 跟 Weighted Average。
+
+# Macro Average
+
+他就是每一類的平均，以上面的 precision 為例
+
+$$
+\frac{0.67+0+1}{3} \sim 0.56
+$$
+
+# Weighted Average
+
+他就是每一類的加權平均，以上面的 precision 為例
+
+$$
+\frac{2}{5} * 0.67 + \frac{1}{5} * 0 + \frac{2}{5} * 1  \sim 0.67
+$$
+
+

@@ -131,8 +131,11 @@ path_dictionary['root'] = Path('../../machine-learning(scikit-learn)/jupyter/評
 path_dictionary['list'] = [
                 'introduce.ipynb',
                 'metrics_classification.ipynb',
+                'metrics_regression.ipynb',
                 ]
 path_dictionary_list.append(path_dictionary)
+
+
 
 
 # 基本模型 的 Clustering
