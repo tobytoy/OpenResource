@@ -171,10 +171,9 @@ path_dictionary['root'] = Path('../../miscellaneous/jupyter/')
 path_dictionary['list'] = [
                 'rule-of-72.ipynb',
                 'iso.ipynb',
+                'search_opt.ipynb'
                 ]
 path_dictionary_list.append(path_dictionary)
-
-
 
 
 
