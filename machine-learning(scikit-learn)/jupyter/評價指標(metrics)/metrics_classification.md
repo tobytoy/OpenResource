@@ -172,12 +172,36 @@ Recall = \frac{TP}{TP+FN}
 $$
 
 
+* 我們來細緻的解說 Precision ，根據他的算法，分母為模型預測有病的數量，分子為，在他預測有病裡面預測正確的機率。
+* 接下來看看 Recall ，根據他的算法，分母為真的有病的數量，分子為，在真的有病的人裡面模型有找出來的數量。
+
+有的時候在不同任務我們會在乎 Precision，有的時候會更在乎 Recall，那如果都在乎怎麼辦。
+
+
 ## F-score
 
+$$
+f = 1 / \Big (\frac{\frac{1}{Precision} + \frac{1}{Recall}}{2} \Big) = \frac{2*Recall*Precision}{Recall+Precision}
+$$
+
+如果我們是有偏好的在乎
+
+### F-beta score
 
 $$
-f = 1 / \Big (\frac{\frac{1}{Precision} + \frac{1}{Recall}}{2} \Big)
+f_{\beta} = \frac{(1+\beta^2)*Recall*Precision}{Recall + \beta^2 * Precision}
 $$
+
+其中 $\beta^2 = \frac{R_w}{P_w}, R_w + P_w = 1$
+
+上面的公式可以由下面導出來。
+
+$$
+\frac{1}{f_{\beta}} = \frac{P_w}{Precision} + \frac{R_w}{Recall}
+$$
+
+一般的 $F-score$ 是取 $P_w = R_w = 0.5$。
+
 
 
 下面進入實戰。
@@ -185,20 +209,34 @@ $$
 
 
 ```python 
-from sklearn.metrics import precision_score, recall_score, f1_score
-y_pred = [0, 2, 1, 0, 0, 1]
+from sklearn.metrics import precision_score, recall_score, f1_score, fbeta_score
+y_true = [0, 1, 2, 2, 0]
+y_pred = [0, 0, 2, 1, 0]
 
+print('precision:')
 display(precision_score(y_true, y_pred, average='macro'))
 # if imbalance
 display(precision_score(y_true, y_pred, average='micro'))
 
+display(precision_score(y_true, y_pred, average='weighted'))
+
+print('recall:')
 display(recall_score(y_true, y_pred, average='macro'))
 # if imbalance
 display(recall_score(y_true, y_pred, average='micro'))
+display(recall_score(y_true, y_pred, average='weighted'))
 
+print('f1:')
 display(f1_score(y_true, y_pred, average='macro'))
 # if imbalance
 display(f1_score(y_true, y_pred, average='micro'))
+display(f1_score(y_true, y_pred, average='weighted'))
+
+print('f beta:')
+display(fbeta_score(y_true, y_pred, average='macro', beta=0.7))
+# if imbalance
+display(fbeta_score(y_true, y_pred, average='micro', beta=0.7))
+display(fbeta_score(y_true, y_pred, average='weighted', beta=0.7))
 
 ```
 
@@ -283,6 +321,33 @@ $$
 
 $$
 \frac{2}{5} * 0.67 + \frac{1}{5} * 0 + \frac{2}{5} * 1  \sim 0.67
+$$
+
+
+# Micro Average
+
+報表裡面沒有但是我們還是要提一下，他就是不考慮類別直接計算全部類別。
+以上面的 precision 為例
+
+* y_true = [0, 1, 2, 2, 0]
+* y_pred = [0, 0, 2, 1, 0]
+
+## 0 類
+* TP: 2
+* FP: 1 
+
+## 1 類
+* TP: 0
+* FP: 1 
+
+## 2 類
+* TP: 1
+* FP: 0 
+
+所以
+
+$$
+Micro-precision = \frac{2+0+1}{(2+0+1) + (1+1+0)}
 $$
 
 
