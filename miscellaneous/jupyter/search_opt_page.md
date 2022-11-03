@@ -13,9 +13,11 @@ MathJax.Hub.Config({
 
 # optimization
 
-[pytorch optimization algorithms](https://pytorch.org/docs/stable/optim.html)
-[tensorflow optimization algorithms](https://www.tensorflow.org/api_docs/python/tf/keras/optimizers)
-[最佳化](https://zh.wikipedia.org/zh-tw/%E6%9C%80%E4%BC%98%E5%8C%96)
+* [pytorch optimization algorithms](https://pytorch.org/docs/stable/optim.html)
+* [tensorflow optimization algorithms](https://www.tensorflow.org/api_docs/python/tf/keras/optimizers)
+* [Benchmarking Deep Learning Optimizers](http://proceedings.mlr.press/v139/schmidt21a/schmidt21a.pdf)
+* [SAM Optimizer](https://github.com/google-research/sam)
+* [最佳化](https://zh.wikipedia.org/zh-tw/%E6%9C%80%E4%BC%98%E5%8C%96)
 
 
 
