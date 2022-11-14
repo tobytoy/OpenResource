@@ -120,6 +120,7 @@ path_dictionary = dict()
 path_dictionary['root'] = Path('../../machine-learning(scikit-learn)/jupyter/輸入(input)/')
 path_dictionary['list'] = [
                 'standardization.ipynb',
+                'cross-validation.ipynb',
                 ]
 path_dictionary_list.append(path_dictionary)
 

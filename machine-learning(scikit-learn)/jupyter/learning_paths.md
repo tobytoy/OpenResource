@@ -39,6 +39,7 @@
 ## 輸入
 
 - [標準化](%E8%BC%B8%E5%85%A5(input)/standardization_page)
+- [cross validation](%E8%BC%B8%E5%85%A5(input)/cross-validation_page)
 
 ## 輸出
 
