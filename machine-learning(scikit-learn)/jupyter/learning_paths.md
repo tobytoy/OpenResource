@@ -36,6 +36,10 @@
 - 支持向量機 [SVM](%E5%9F%BA%E6%9C%AC%E6%A8%A1%E5%9E%8B(basic-model)/%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%A9%9F(SVM)/04_01%20Support_Vector_Machines_page)
 - 核函數 [kernel](%E5%9F%BA%E6%9C%AC%E6%A8%A1%E5%9E%8B(basic-model)/%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%A9%9F(SVM)/04_02%20SVM_Kernel_Trick_page)
 
+## 輸入
+
+- [標準化](%E8%BC%B8%E5%85%A5(input)/standardization_page)
+
 ## 輸出
 
 - [多類、多標籤、多輸出](%E8%BC%B8%E5%87%BA(output)/multi-class_multi-label_multi-task_page)

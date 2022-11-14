@@ -16,8 +16,11 @@
 
 於是你畫下你的決策樹。
 
+
+
 <details>
 <summary> 手繪決策樹 </summary>
+
 ![tree](../../../images/consume.drawio.png)
 
 </details>
