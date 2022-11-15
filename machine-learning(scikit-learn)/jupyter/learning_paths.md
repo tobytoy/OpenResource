@@ -65,6 +65,7 @@
 # 樹模型 Tree Model
 
 - [簡介](%E5%9F%BA%E6%9C%AC%E6%A8%A1%E5%9E%8B(basic-model)/%E6%A8%B9%E6%A8%A1%E5%9E%8B(decision-trees)/08_01%20Introduce_page)
+- [決策樹](%E5%9F%BA%E6%9C%AC%E6%A8%A1%E5%9E%8B(basic-model)/%E6%A8%B9%E6%A8%A1%E5%9E%8B(decision-trees)/08_02%20decision-trees_page)
 
 # 分群
 

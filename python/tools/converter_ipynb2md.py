@@ -107,13 +107,16 @@ path_dictionary['list'] = [
 path_dictionary_list.append(path_dictionary)
 
 
-# 基本模型 的 NearestNeighbors
+# 基本模型 的 樹模型
 path_dictionary = dict()
 path_dictionary['root'] = Path('../../machine-learning(scikit-learn)/jupyter/基本模型(basic-model)/樹模型(decision-trees)/')
 path_dictionary['list'] = [
                 '08_01 Introduce.ipynb',
+                '08_02 decision-trees.ipynb'
                 ]
 path_dictionary_list.append(path_dictionary)
+
+
 
 # 輸入 input 
 path_dictionary = dict()
@@ -123,8 +126,6 @@ path_dictionary['list'] = [
                 'cross-validation.ipynb',
                 ]
 path_dictionary_list.append(path_dictionary)
-
-
 
 
 
