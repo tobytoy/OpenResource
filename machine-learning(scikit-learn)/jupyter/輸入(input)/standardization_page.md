@@ -10,13 +10,13 @@ MathJax.Hub.Config({
 
 
 
-在前處理(preprocessing)的問題也包含缺失值處理(Missing Values)，我們把這個問題，移到 "其他工具" 的 pandas 的教學裡面。
+在前處理 （preprocessing） 的問題也包含缺失值處理 （Missing Values），我們把這個問題，移到 "其他工具" 的 pandas 的教學裡面。
 
 
 
 
 # Standardization
-在scikit-learn 裡面提供了四種不同資料處理的方法
+在scikit-learn 裡面提供了四種不同的資料處理方法
 
 * StandardScaler (平均值和標準差)
 * MinMaxScaler (最小最大值標準化)
@@ -33,14 +33,14 @@ $$
 X_{scaled} = \frac{X - X.min}{X.max - X.min}
 $$
 
-默認是對每一列都去做縮放。
+默認選項是對每一列都去做縮放。
 
 ## MaxAbsScaler
 數據會縮放到到 $[-1,1]$ 之間，方法類似 MinMaxScaler。
 
 
 ## RobustScaler
-可以有效的縮放帶有outlier的數據，透過Robust如果數據中含有異常值在縮放中會捨去。
+可以有效的縮放帶有outlier的數據，透過Robust如果數據中含有異常值在縮放中會被捨去。
 
 
 
