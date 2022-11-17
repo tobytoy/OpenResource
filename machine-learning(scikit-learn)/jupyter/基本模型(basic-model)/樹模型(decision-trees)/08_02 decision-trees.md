@@ -206,11 +206,29 @@ print("Explained Variance Score: %.2f" % explained_variance_score(y_test, y_pred
 ```
 
 
+# Random Forest 與 Extremely Randomized Trees 的參數選擇
+
+下面要來碎碎念參數的選擇，
+主要的調整參數是 **n_estimators** 和 **max_features**，
+第一個參數 **n_estimators** 是要取多少樹的數量，通常越多效果越好，但是計算量越大，
+第二個參數 **max_features** 是要隨機取多少特徵，通常這個參數減小，Variance 減小，Bias 增大。
+
+默認值參數建議，**max_features=sqrt(n_features)**，**max_depth=None** 和 **min_samples_split=2**。
+
+另外在 Random Forest 默認自己隨機採樣 （bootstrap = True），
+Extremely Randomized Trees 的默認為使用整個數據 （bootstrap = False）。
+
+
+
+
+
+
 # XGBoost
+
+[官網文件](https://xgboost.readthedocs.io/en/stable/)
 
 下面介紹 XGBoost， XGBoost 是 eXtreme Gradient Boosting 的簡寫，
 對於計算速度與模型的表現都有特別優化。
-
 
 
 
@@ -267,8 +285,11 @@ print("Explained Variance Score: %.2f" % explained_variance_score(y_test, y_pred
 
 ## LightGBM
 
+[官網說明](https://lightgbm.readthedocs.io/en/v3.3.2/)
+
 LightGBM 跟 XGBoost 很相似， LightGBM 是微軟做的，他比 XGBoost 更節省記憶體，速度也更快，
 不過在使用上需要改變一下使用習慣。
+
 
 
 
