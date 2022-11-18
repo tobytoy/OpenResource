@@ -12,7 +12,7 @@ MathJax.Hub.Config({
 
 # Decision Trees 決策樹
 
-決策樹 是 非參數的監督學習可以用來做分類與回歸，我們前面已經說過他的概念，下面會介紹用 Decision Trees 做 分類 （classification） 與回歸 （regression）。
+決策樹 是 非參數的監督學習，可以用來做分類與回歸，我們前面已經教過他的概念，下面會詳細說明如何用 Decision Trees 做 分類 （classification） 與回歸 （regression）。
 
 
 
@@ -82,15 +82,15 @@ print("Explained Variance Score: %.2f" % explained_variance_score(y_test, y_pred
 ```
 
 
-# 隨機深林樹 （Random Forest）
+# 隨機森林樹 （Random Forest）
 
-簡單的說隨機深林樹就是決策樹加上 bagging
-假設我們有訓練資料 $X, y$，下面來說說隨機深林樹的實現步奏。
+簡單的說，隨機森林樹就是決策樹加上 bagging
+假設我們有訓練資料 $X, y$，下面來說說隨機森林樹的實現步驟。
 
-* 我們隨機抽取訓練資料 $n$ 筆，假設第 $i$ 次抽取出的資料叫 $X_i, y_i$，我們允許重複抽取。
+* 我們先隨機抽取訓練資料 $n$ 筆，假設第 $i$ 次抽取出的資料叫 $X_i, y_i$ ，我們允許重複抽取。
 * 拿每筆資料 $X_i$，隨機抽取 $m$ 個特徵 然後另取一個名子 $\bar{X}_i$。
 * 拿每筆資料 $\bar{X}_i, y_i$，去訓練一個決策樹模型。
-* 如果做分類問題，把所有的模型做投票取最終結果，如果做回歸問題，把所有模型的輸出取平均
+* 如果做分類問題時，把所有的模型做投票取最終結果，如果做回歸問題，把所有模型的輸出取平均
 
 [參考資料](https://zhuanlan.zhihu.com/p/86263786)
 
@@ -98,12 +98,12 @@ print("Explained Variance Score: %.2f" % explained_variance_score(y_test, y_pred
 
 # 極端隨機樹 （Extremely Randomized Trees）
 
-極端樹可以看做隨機深林樹的變種，可以簡單的理解為更隨機，但是計算量更大的隨機深林樹。
+極端樹可以看做隨機森林樹的變種，可以簡單的理解為更隨機的取樣，但這是計算量更大的隨機森林樹。
 
-假設我們有訓練資料 $X, y$，下面來說說隨機深林樹的實現步奏。
+假設我們有訓練資料 $X, y$，下面來說說隨機森林樹的實現步奏。
 
 * 拿取全部資料 $X$ （隨機樹會在這邊做一次隨機抽取）， 隨機抽取 $m$ 個特徵。
-* 對於這 $m$ 個特徵，每個特徵選擇隨機分裂，再看這 $m$ 個分裂哪個分數最高。 (跟隨機樹比分裂節點更隨機)
+* 對於這 $m$ 個特徵，每個特徵選擇隨機分裂，再看這 $m$ 個分裂哪個分數最高。（跟隨機樹相比，分裂節點更隨機。）
 
 
 [參考資料](https://zhuanlan.zhihu.com/p/380323376)
@@ -220,7 +220,7 @@ print("Explained Variance Score: %.2f" % explained_variance_score(y_test, y_pred
 
 下面要來碎碎念參數的選擇，
 主要的調整參數是 **n_estimators** 和 **max_features**，
-第一個參數 **n_estimators** 是要取多少樹的數量，通常越多效果越好，但是計算量越大，
+第一個參數 **n_estimators** 是要取多少樹的數量，通常越多效果越好，但是計算量也就越大，
 第二個參數 **max_features** 是要隨機取多少特徵，通常這個參數減小，Variance 減小，Bias 增大。
 
 默認值參數建議，**max_features=sqrt(n_features)**，**max_depth=None** 和 **min_samples_split=2**。
@@ -297,8 +297,7 @@ print("Explained Variance Score: %.2f" % explained_variance_score(y_test, y_pred
 
 [官網說明](https://lightgbm.readthedocs.io/en/v3.3.2/)
 
-LightGBM 跟 XGBoost 很相似， LightGBM 是微軟做的，他比 XGBoost 更節省記憶體，速度也更快，
-不過在使用上需要改變一下使用習慣。
+LightGBM 跟 XGBoost 很相似， LightGBM 是微軟做的產品，他比 XGBoost 更節省記憶體，速度也更快。
 
 
 
