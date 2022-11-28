@@ -70,3 +70,7 @@
 # 分群
 
 - [簡介](%E5%9F%BA%E6%9C%AC%E6%A8%A1%E5%9E%8B(basic-model)/Clustering/07_01%20Introduction_and_Kmeans_page)
+
+# 降維
+
+- [PCA](%E5%9F%BA%E6%9C%AC%E6%A8%A1%E5%9E%8B(basic-model)/Decomposing/09_01%20PCA_page)

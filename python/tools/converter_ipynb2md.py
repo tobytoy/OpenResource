@@ -161,6 +161,19 @@ path_dictionary_list.append(path_dictionary)
 
 
 
+# Decomposing
+path_dictionary = dict()
+path_dictionary['root'] = Path('../../machine-learning(scikit-learn)/jupyter/基本模型(basic-model)/Decomposing/')
+path_dictionary['list'] = [
+                '09_01 PCA.ipynb',
+                ]
+path_dictionary_list.append(path_dictionary)
+
+
+
+
+
+
 ##############################################################
 ####              Statistics 統計       
 ##############################################################
