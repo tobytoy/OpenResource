@@ -12,7 +12,7 @@ MathJax.Hub.Config({
 
 # feature selection
 
-下面介紹常見的特徵選擇的方法，第一種就是根據 Variance 去篩選，如果有非常相似就可以刪除。
+下面介紹一些常見的特徵選擇的方法，第一種就是根據 Variance 去做篩選，如果有非常相似的就可以直接刪除。
 
 
 
@@ -29,9 +29,9 @@ sel.fit_transform(X)
 ```
 
 
-我們也可以基於統計的變異數分析(ANOVA)去選，
-我們可以用 SelectKBest 直接選出最好的，
-或是用 SelectPercentile 根據百分比去選出前面好的特徵。
+我們也可以基於統計的變異數分析 （ANOVA） 去選，
+使用 SelectKBest 直接選出最好的，
+或是用 SelectPercentile 根據百分比去挑選出前面較好的特徵。
 
 
 
@@ -98,7 +98,7 @@ model_pipeline.get_params().keys()
 ```
 
 
-還有其他的特徵選擇器，但是就介紹到這邊，更多內容可以參考 [feature_selection](https://scikit-learn.org/stable/modules/feature_selection.html)。
+還有其他的特徵選擇器，目前就介紹到這邊，更多內容可以參考 [feature_selection](https://scikit-learn.org/stable/modules/feature_selection.html)。
 
 
 
