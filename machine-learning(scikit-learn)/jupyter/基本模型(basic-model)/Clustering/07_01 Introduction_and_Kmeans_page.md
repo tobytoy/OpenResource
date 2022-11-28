@@ -156,6 +156,9 @@ plt.plot(range(2,10), inertias)
 # 拿來跟真實的標記比較
 from itertools import permutations 
 from sklearn.metrics import accuracy_score
+from sklearn import datasets
+from sklearn.cluster import KMeans
+from sklearn.model_selection import train_test_split
 
 acc_train_list = list()
 acc_test_list  = list()

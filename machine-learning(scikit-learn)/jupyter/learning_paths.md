@@ -57,7 +57,7 @@
 - metrices [簡介](%E8%A9%95%E5%83%B9%E6%8C%87%E6%A8%99(metrics)/introduce_page)
 - metrices [分類](%E8%A9%95%E5%83%B9%E6%8C%87%E6%A8%99(metrics)/metrics_classification_page)
 - metrices [回歸](%E8%A9%95%E5%83%B9%E6%8C%87%E6%A8%99(metrics)/metrics_regression_page)
-- metrices 分群
+- metrices [分群](%E8%A9%95%E5%83%B9%E6%8C%87%E6%A8%99(metrics)/metrics_clustering_page)
 
 # 好鄰居
 

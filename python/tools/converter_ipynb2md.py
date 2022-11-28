@@ -146,9 +146,9 @@ path_dictionary['list'] = [
                 'introduce.ipynb',
                 'metrics_classification.ipynb',
                 'metrics_regression.ipynb',
+                'metrics_clustering.ipynb',
                 ]
 path_dictionary_list.append(path_dictionary)
-
 
 
 
