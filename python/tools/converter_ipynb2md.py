@@ -135,8 +135,10 @@ path_dictionary = dict()
 path_dictionary['root'] = Path('../../machine-learning(scikit-learn)/jupyter/輸出(output)/')
 path_dictionary['list'] = [
                 'multi-class_multi-label_multi-task.ipynb',
+                'Density_Estimation.ipynb',
                 ]
 path_dictionary_list.append(path_dictionary)
+
 
 
 # 評價指標 metrics 
