@@ -124,6 +124,7 @@ path_dictionary['root'] = Path('../../machine-learning(scikit-learn)/jupyter/輸
 path_dictionary['list'] = [
                 'standardization.ipynb',
                 'cross-validation.ipynb',
+                'feature-selection.ipynb',
                 ]
 path_dictionary_list.append(path_dictionary)
 
