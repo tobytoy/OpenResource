@@ -147,6 +147,7 @@ path_dictionary['root'] = Path('../../machine-learning(scikit-learn)/jupyter/評
 path_dictionary['list'] = [
                 'introduce.ipynb',
                 'metrics_classification.ipynb',
+                'metrics_classification_advance.ipynb',
                 'metrics_regression.ipynb',
                 'metrics_clustering.ipynb',
                 ]
