@@ -170,6 +170,7 @@ path_dictionary = dict()
 path_dictionary['root'] = Path('../../machine-learning(scikit-learn)/jupyter/基本模型(basic-model)/Clustering/')
 path_dictionary['list'] = [
                 '07_01 Introduction_and_Kmeans.ipynb',
+                '07_02 other_method_simple.ipynb',
                 ]
 path_dictionary_list.append(path_dictionary)
 
