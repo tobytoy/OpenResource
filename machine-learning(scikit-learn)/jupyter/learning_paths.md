@@ -79,3 +79,11 @@
 # 降維
 
 - [PCA](%E5%9F%BA%E6%9C%AC%E6%A8%A1%E5%9E%8B(basic-model)/Decomposing/09_01%20PCA_page)
+
+
+# 輔助技巧
+
+- [Pipeline](%E8%BC%94%E5%8A%A9%E6%8A%80%E5%B7%A7(skills)/pipeline_page)
+- [Search](%E8%BC%94%E5%8A%A9%E6%8A%80%E5%B7%A7(skills)/search_page)
+
+

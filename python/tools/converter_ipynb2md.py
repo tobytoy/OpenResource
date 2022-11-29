@@ -154,6 +154,16 @@ path_dictionary['list'] = [
 path_dictionary_list.append(path_dictionary)
 
 
+# 輔助技巧 skills
+path_dictionary = dict()
+path_dictionary['root'] = Path('../../machine-learning(scikit-learn)/jupyter/輔助技巧(skills)/')
+path_dictionary['list'] = [
+                'pipeline.ipynb',
+                'search.ipynb',
+                ]
+path_dictionary_list.append(path_dictionary)
+
+
 
 # 基本模型 的 Clustering
 path_dictionary = dict()
