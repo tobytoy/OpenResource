@@ -131,9 +131,9 @@ plt.rcParams['figure.figsize'] = [15, 15]
 
 X_plot = np.linspace(-7, 7, 1000)[:, None]
 
-rand_data = random.randn(1000)[:, None]
+rand_data = (random.randn(1000)*3)[:, None]
 
-log_dens = KernelDensity(kernel="gaussian", bandwidth=0.5).fit(rand_data).score_samples(X_plot)
+log_dens = KernelDensity(kernel="epanechnikov", bandwidth=1).fit(rand_data).score_samples(X_plot)
 y = np.exp(log_dens)
 
 plt.plot(X_plot, y, color='blue')
