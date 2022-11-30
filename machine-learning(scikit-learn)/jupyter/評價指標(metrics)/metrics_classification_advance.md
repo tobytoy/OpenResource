@@ -337,3 +337,19 @@ plt.show()
 [參考](https://zhuanlan.zhihu.com/p/34655990)
 
 
+目前 scikit learn 還不支援自己修改輸出的 threadhold ，我們可以看完 PR 跟 ROC Curve 以後再寫函數自己去後製輸出。
+
+
+
+```python 
+print('result class: \n', classifier.predict(X_test)[:5])
+print('result probability: \n', classifier.predict_proba(X_test)[:5])
+print('result score: \n', classifier.decision_function(X_test)[:5])
+
+# 自己寫輸出函數
+function_thread = lambda output, thread=0.5: [1 if item>thread else 0 for item in output]
+final_result = list(map(function_thread, classifier.predict_proba(X_test)))
+print('my final result:')
+final_result[:10]
+
+```
