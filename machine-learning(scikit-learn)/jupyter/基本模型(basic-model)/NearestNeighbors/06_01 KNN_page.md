@@ -108,6 +108,103 @@ plt.show()
 ```
 
 
+如果要在 Colab 上面跑，先更新環境。
+
+``` python
+!sudo apt-get update -y
+!sudo apt-get install python3.9 python3.9-distutils python3.9-venv
+!python3.9 --version
+!python3.9 -m venv venv
+!venv/bin/pip install scikit-learn matplotlib seaborn ipykernel
+```
+
+再寫入檔案
+
+```python
+content = """
+import matplotlib.pyplot as plt
+import seaborn as sns
+from matplotlib.colors import ListedColormap
+from sklearn import neighbors, datasets
+from sklearn.inspection import DecisionBoundaryDisplay
+import matplotlib.pyplot as plt
+
+plt.rcParams['figure.figsize'] = [20, 40]
+
+n_neighbors = 15
+X, y = datasets.load_iris(return_X_y=True)
+X = X[:, :2]
+
+def name_map(x) :
+    if x == 0:
+        return 'setosa'
+    elif x == 1:
+        return 'versicolor'
+    else:
+        return 'virginica'
+
+cmap_light = ListedColormap(["orange", "cyan", "cornflowerblue"])
+cmap_bold = ["darkorange", "c", "darkblue"]
+
+fig, axis = plt.subplots(4,2)
+for i_a, algorithm in enumerate(["auto", "ball_tree", "kd_tree", "brute"]):
+    for i_w, weights in enumerate(["uniform", "distance"]):
+        classifier = neighbors.KNeighborsClassifier(n_neighbors, weights=weights, algorithm=algorithm).fit(X, y)
+        ax = axis[i_a][i_w]
+        DecisionBoundaryDisplay.from_estimator(
+            classifier,
+            X,
+            cmap=cmap_light,
+            ax=ax,
+            response_method="predict",
+            plot_method="pcolormesh",
+            xlabel='sepal length (cm)',
+            ylabel='sepal width (cm)',
+            shading="auto",
+        )
+        sns.scatterplot(
+            x=X[:, 0],
+            y=X[:, 1],
+            hue=map(name_map, y),
+            palette=cmap_bold,
+            ax=ax,
+            alpha=1.0,
+            edgecolor="black",
+        )
+        ax.set_title(
+            "3-Class classification (k = %i, weights = '%s', algorithm = '%s')" % (n_neighbors, weights, algorithm)
+        )
+plt.savefig('output.png')
+"""
+
+with open('run.py', 'w') as f:
+  f.write(content)
+```
+
+然後執行
+
+```python
+!venv/bin/python run.py
+```
+
+再把圖顯示出來
+
+```python
+import cv2
+import numpy as np
+from matplotlib import pyplot as plt
+
+image = cv2.cvtColor(cv2.imread('output.png'), cv2.COLOR_BGR2RGB)
+
+plt.figure(figsize=(10, 10))
+plt.imshow(image)
+plt.show()
+
+```
+
+
+
+
 # Algorithm
 
 不知道大家留意上面的演算法了嗎? 可以選的參數有 ``auto``, ``ball_tree``, ``kd_tree``, ``brute``，
