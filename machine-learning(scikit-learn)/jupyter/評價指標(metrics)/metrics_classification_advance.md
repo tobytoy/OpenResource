@@ -10,6 +10,14 @@
 
 
 
+### 多提一點不是每種模型都有 probability 或 decision
+
+* [SGD](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDClassifier.html?highlight=sgdclassifier#sklearn.linear_model.SGDClassifier)
+* [SVC](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC)
+* [Decision Tree](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html?highlight=decisiontreeclassifier#sklearn.tree.DecisionTreeClassifier)
+
+
+
 
 ```python 
 from sklearn.datasets import load_iris
@@ -34,6 +42,9 @@ print('Predict Probability: ', y_pred_proba)
 # The confidence score for a sample is proportional to the signed distance of that sample to the hyperplane.
 y_pred_decision = classifier.decision_function(X_test)
 print('Confidence Score: ', y_pred_decision)
+
+
+
 
 ```
 
@@ -106,7 +117,7 @@ $$
 ```python 
 import numpy as np
 from sklearn.datasets import load_iris
-from sklearn.svm import LinearSVC
+from sklearn.svm import LinearSVC, SVC
 from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
 from sklearn.metrics import PrecisionRecallDisplay
@@ -130,7 +141,7 @@ X_train, X_test, y_train, y_test = train_test_split(X[y < 2], y[y < 2], test_siz
 
 
 classifier = LinearSVC(random_state=random_state).fit(X_train, y_train)
-
+# classifier = SVC(random_state=random_state, probability=True).fit(X_train, y_train)  # 改機率
 
 # 如果用 from_estimator 要把模型也傳進去
 display_estimator = PrecisionRecallDisplay.from_estimator(
@@ -140,6 +151,7 @@ display_estimator.ax_.set_title("Precision-Recall Curve from Estimator")
 
 # 如果預測出結果可以用 from_predictions
 y_score = classifier.decision_function(X_test)
+# y_score = list(map(max, classifier.predict_proba(X_test)))   # 改機率
 
 display_predictions = PrecisionRecallDisplay.from_predictions(
     y_test, y_score, name="LinearSVC", ax=ax_12
@@ -317,6 +329,11 @@ plt.show()
 ```
 
 
-這邊多提一下 Precision-Recall Curve 只關心到 TP 沒考慮到 TN，
-而 ROC Curve 有考慮到 TN。
+這邊多提一下 ROC Curve 會同等重要的考慮到 Positive 跟 Negative 的樣本，而 Precision-Recall Curve 更專心在 Positive 的樣本。
+我們可以觀察的出來如果 Negative 的樣本數減少的話 PR Curve 會很敏感的變化，但是 ROC Curve 不會這麼敏感。
+一般的看法是如果類別不平衡看 PR，均衡看 ROC，我的建議是都看，你理解兩條曲線畫出來的原理，你就可以知道你的模型弱點在哪邊。
+
+
+[參考](https://zhuanlan.zhihu.com/p/34655990)
+
 
