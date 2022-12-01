@@ -215,3 +215,69 @@ for score in scores:
     print(classification_report(y_test, y_pred))
     
 ```
+
+
+# RandomizedSearchCV
+
+在很多時候我們並不知道那些參數好，使用 RandomizedSearchCV，
+可以讓收尋空間是某個 distribution 。
+
+下面是一個使用範例
+
+
+
+```python 
+from sklearn import datasets
+from sklearn.model_selection import train_test_split, RandomizedSearchCV
+from sklearn.metrics import classification_report
+from sklearn.svm import SVC
+import numpy as np
+from scipy.stats import uniform
+from sklearn.utils.fixes import loguniform
+
+
+X, y = datasets.load_digits(return_X_y=True)
+n_samples = len(X)
+X = X.reshape((n_samples, -1))
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.5, random_state=87)
+
+# 設置搜尋參數
+tuned_parameters = [
+    {'kernel': ['rbf'], 
+     'gamma': [1e-3, 1e-4, 'scale'],
+     'C': uniform(loc=1, scale=999),                  # 均勻分布 
+     },
+    {'kernel': ['linear'], 
+     'C': np.logspace(0, 3, base=10, num = 100),      # log 均勻分布  base^0  ~ base^3
+     },
+    {'kernel': ['poly'],
+     'gamma': ['scale', 'auto'],
+     'degree': [2, 3, 4, 5, 6],
+     'C': loguniform(1e0, 1e3),                        # 也是 log 均勻分布
+     },
+]
+
+scores = ['precision_macro', 'recall_micro', 'f1_weighted', 
+          'accuracy', 'balanced_accuracy']
+
+for score in scores:
+    print("# Tuning hyper-parameters for %s \n" % score)
+
+    classifier = RandomizedSearchCV(
+        SVC(), tuned_parameters, scoring='%s' % score
+    ).fit(X_train, y_train)
+
+    print("Best parameters set found on development set: \n")
+    print(classifier.best_params_)
+    print("\nGrid scores on development set:\n")
+    
+    means = classifier.cv_results_['mean_test_score']
+    stds = classifier.cv_results_['std_test_score']
+    for mean, std, params in zip(means, stds, classifier.cv_results_['params']):
+        print("%0.3f (+/-%0.03f) for %r" % (mean, std * 2, params))
+    
+    print("\nDetailed classification report:\n")
+    y_pred = classifier.predict(X_test)
+    print(classification_report(y_test, y_pred))
+```
