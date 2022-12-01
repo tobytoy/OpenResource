@@ -4,13 +4,13 @@
 # 靈魂拷問
 
 
-* 我們來看一個模型的預測，他的預測是直接就是答案嗎?
-* 如果不是答案是機率，例如預測一張圖片是貓的機率，那多高算貓貓，$0.5$ ?
-* 如果是機率那之前提的準確率、精確率、召回率怎麼算?
+* 我們來看一個模型的預測，他的預測結果直接就是答案嗎?
+* 如果並不是答案只是機率，預測出一張圖片是貓的機率，那要多高才算是貓貓，$0.5$ 夠嗎?
+* 如果只是機率那之前提到的準確率、精確率、召回率，又要怎麼算?
 
 
 
-### 多提一點不是每種模型都有 probability 或 decision
+### 多提一點，並不是每種模型都有 probability 或 decision
 
 * [SGD](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDClassifier.html?highlight=sgdclassifier#sklearn.linear_model.SGDClassifier)
 * [SVC](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC)
@@ -84,7 +84,7 @@ $$
 
 # Precision-Recall Curve
 
-我們可以再活用之前的知識把 Precision 跟 Recall 依據不同的閾值 畫在圖上。
+我們可以再活用之前的知識，把 Precision 跟 Recall 依據不同的閾值 畫在圖上。
 
 * x-軸 : Recall
 * y-軸 : Precision
@@ -101,7 +101,7 @@ $$
 
 ## mAP （mean Average precision）
 
-如果分類的任務不只兩類是多類，就把每一類的 AP 取平均。
+如果分類的任務不只兩類而是多類，就把每一類的 AP 取平均。
 
 
 ### 下面給 Precision-Recall Curve 使用範例
@@ -187,7 +187,7 @@ ROC 曲線越靠左上越好。
 AUC 代表在 ROC 曲線下的面積
 
 * $AUC=1$ 代表非常完美
-* $0.5<AUC<1$ 代表模型有學到東西可以調閾值
+* $0.5<AUC<1$ 代表模型有學到東西，可以去調整閾值
 * $AUC=0.5$ 跟猜得一樣
 * $AUC<0.5$ 比猜的還差
 
@@ -329,15 +329,19 @@ plt.show()
 ```
 
 
-這邊多提一下 ROC Curve 會同等重要的考慮到 Positive 跟 Negative 的樣本，而 Precision-Recall Curve 更專心在 Positive 的樣本。
-我們可以觀察的出來如果 Negative 的樣本數減少的話 PR Curve 會很敏感的變化，但是 ROC Curve 不會這麼敏感。
-一般的看法是如果類別不平衡看 PR，均衡看 ROC，我的建議是都看，你理解兩條曲線畫出來的原理，你就可以知道你的模型弱點在哪邊。
+這邊多提一下， ROC Curve 會同等比重去考慮到 Positive 跟 Negative 的樣本，
+而 Precision-Recall Curve 更專心在 Positive 的樣本。
+我們可以觀察的出來，如果 Negative 的樣本數減少的話， 
+PR Curve 會很敏感的產生變化，但是 ROC Curve 不會這麼敏感。
+一般人的看法是，如果類別不平衡看 PR，均衡就看 ROC，我的建議是兩種都看，
+你如果理解兩條曲線畫出來的原理，你就可以知道你的模型弱點在哪邊。
 
 
 [參考](https://zhuanlan.zhihu.com/p/34655990)
 
 
-目前 scikit learn 還不支援自己修改輸出的 threadhold ，我們可以看完 PR 跟 ROC Curve 以後再寫函數自己去後製輸出。
+目前 scikit learn 還不支援自己修改輸出的 threadhold ，
+我們可以在看完 PR 跟 ROC Curve 以後，再自己寫函數去後製輸出。
 
 
 

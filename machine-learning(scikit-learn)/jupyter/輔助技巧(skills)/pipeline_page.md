@@ -12,8 +12,8 @@ MathJax.Hub.Config({
 
 # Pipeline
 
-這邊要介紹管道的使用，第一種用法用 Pipeline，
-使用 key, value 的方法建立 Pipeline 。
+這邊要介紹管道 （Pipeline） 的使用方法，第一種是使用 key, value 的方法去建立 Pipeline 。
+
 
 
 
@@ -35,7 +35,7 @@ pipeline
 ```
 
 
-也可以利用 make_pipeline 快速建立 pipeline，他會自動填入名稱，他會把你的名稱都改為小寫自動填入。
+也可以利用 make_pipeline 指令快速建立 pipeline，他會幫忙自動填入名稱，把你填入的名稱都自動改為小寫。
 
 
 

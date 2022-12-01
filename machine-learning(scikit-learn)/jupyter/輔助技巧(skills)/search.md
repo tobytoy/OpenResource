@@ -2,7 +2,7 @@
 
 # GridSearchCV
 
-下面來一個簡單使用範例
+下面來舉一個簡單的使用範例
 
 
 
@@ -61,7 +61,7 @@ for score in scores:
 ```
 
 
-## 可以查可以使用的 scorer 有哪些
+## 可以查詢有哪些是可以使用的 scorer 
 
 
 
