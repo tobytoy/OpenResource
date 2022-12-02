@@ -46,7 +46,7 @@
 
 - [多類、多標籤、多輸出](%E8%BC%B8%E5%87%BA(output)/multi-class_multi-label_multi-task_page)
 - [Kernel Density Estimation](%E8%BC%B8%E5%87%BA(output)/Density_Estimation_page)
-
+- [calibration](%E8%BC%B8%E5%87%BA(output)/calibration_page)
 
 ## SGD
 

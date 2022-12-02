@@ -136,6 +136,7 @@ path_dictionary['root'] = Path('../../machine-learning(scikit-learn)/jupyter/輸
 path_dictionary['list'] = [
                 'multi-class_multi-label_multi-task.ipynb',
                 'Density_Estimation.ipynb',
+                'calibration.ipynb',
                 ]
 path_dictionary_list.append(path_dictionary)
 
