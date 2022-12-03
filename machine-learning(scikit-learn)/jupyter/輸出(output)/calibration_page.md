@@ -12,16 +12,16 @@ MathJax.Hub.Config({
 
 # 機率校準
 
-問一個問題如果你再做一個二分類問題，假設是正或負兩類，
-然後你的模型對某個 sample 輸出預測 $0.8$ ，
+問你一個問題，如果給你一個二分類問題，假設是正或負兩類，
+然後你的模型對某個 sample 輸出預測為 $0.8$ ，
 你會認為他有機會是正類是 $80%$ 嗎?
 
 
-答案是，如果你沒有經過校準，那是錯誤的。
+答案是，如果你沒有經過校準，那會是錯誤的結論。
 
 ## 動機
 
-如果你只是要做圖片分類等等的問題，那你可能只會在意選什麼閥值就好，
+如果你面對的只是要做圖片分類等等問題，那你可能只會在意要選什麼閥值就好
 但是如果你今天要做的是風險分析，或是給出預測報告，
 你就會希望給出的是一個正確的機率。
 
@@ -30,15 +30,16 @@ MathJax.Hub.Config({
 ## Calibration Curve
 
 訓練好一個模型以後，有些模型可以給出機率預測 ``predict_proba``，
-有一些模型沒有只提供 ``decision_function``，你可以使用
+但有一些模型並沒有，只提供 ``decision_function``而已，這時你可以使用
 
 $$
 \frac{score - \min (score)}{\max (score) - \min (score)}
 $$
 
-縮放到 $[0, 1]$ 區間，
+將它縮放到 $[0, 1]$ 區間，
 然後考慮 x 軸放 預測的平均， y 軸放 真實的正例的比例，
-這樣我們就可以知道誤差有多少。
+這樣我們也就可以知道誤差有多少了。
+
 
 
 下面看一個 ``calibration_curve`` 的使用範例。
@@ -116,7 +117,7 @@ plt.show()
 ```
 
 
-如果你還是不太清楚下面去到[程式](https://github.com/scikit-learn/scikit-learn/blob/f3f51f9b6/sklearn/calibration.py#L873)裡面來看。
+如果你還是不太清楚，下面去到[程式](https://github.com/scikit-learn/scikit-learn/blob/f3f51f9b6/sklearn/calibration.py#L873)裡面來看。
 
 
 ![calibration curve](../../images/scikit-learn_calibration.jpg)
