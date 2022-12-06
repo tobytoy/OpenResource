@@ -10,11 +10,20 @@ import json
 ##############################################################
 ####                     匯入清單
 ##############################################################
-path_source_root      = Path('../PythonBasic/content/')
-path_destination_root = Path('../PythonBasic/content_md/')
+#path_source_root      = Path('../PythonBasic/content/')
+#path_destination_root = Path('../PythonBasic/content_md/')
+
+path_root_dictionary_list = [
+    Path('../PythonBasic/content/')
+]
 
 
-
+##############################################################
+####                     匯入清單
+##############################################################
+path_list = []
+for path_root in path_root_dictionary_list:
+    path_list += list(path_root.glob('*'))
 
 
 def replace_function(string_item):
@@ -34,14 +43,11 @@ MathJax.Hub.Config({
 </script>\n\n"""
 
 
+    path_destination_root = path_ipynb.parent.parent / 'content_md'
 
-
-
-    for path_ipynb in list(path_source_root.glob('*')):
+    with open(path_ipynb, encoding = "UTF-8") as file:
+        data = json.load(file)    
     
-        with open(path_ipynb, encoding = "UTF-8") as file:
-            data = json.load(file)
-
     file_name      = path_ipynb.name.split('.ipynb')[0] + '.md'
     file_page_name = path_ipynb.name.split('.ipynb')[0] + '_page.md'
     file_path      = path_destination_root / file_name
@@ -80,6 +86,7 @@ MathJax.Hub.Config({
     
 
 def main():
+    global path_list
     for path in tqdm(path_list, desc = "Converter Progress:"):
         converter(path)
 
