@@ -133,6 +133,7 @@ model_pipeline.get_params().keys()
 ```python 
 from sklearn.svm import SVC
 from sklearn.feature_selection import RFE
+from sklearn.datasets import make_classification
 import matplotlib.pyplot as plt
 
 # 建立 25 個特徵，但只有三個信號源，的 8 分類資料
@@ -151,7 +152,7 @@ X, y = make_classification(
 # n_features_to_select : 決定要多少個 feature
 # step : 每一回合要刪除多少特徵
 estimator = SVC(kernel='linear', C=1)
-rfe = RFE(estimator=estimator, n_features_to_select=5, step=1).fit(X, y)  # n_features_to_select=10, n_features_to_select = 0.5
+rfe = RFE(estimator=estimator, n_features_to_select=0.5, step=1).fit(X, y)  # n_features_to_select=10, n_features_to_select = 0.5
 
 print('Support: \n%s' % rfe.support_)
 print('Rank: \n%s' % rfe.ranking_)
@@ -207,7 +208,7 @@ print("Optimal number of features : %d" % rfecv.n_features_)
 scores = np.transpose([rfecv.cv_results_['split%s_test_score'%i] for i in range(cv_number)])
 
 # Plot
-plt.figure(figsize=(10,10))
+plt.figure(figsize=(5,5))
 plt.xlabel("Number of features selected")
 plt.ylabel("CV score (accuracy)")
 plt.plot(range(1, len(scores) + 1), scores)

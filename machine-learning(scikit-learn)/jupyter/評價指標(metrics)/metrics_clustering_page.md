@@ -182,8 +182,8 @@ print('Adjusted Rand score: ', adjusted_rand_score(labels_true, labels_pred))
 import random
 from sklearn.metrics import rand_score, adjusted_rand_score
 
-n = 10
-test_time = 1000
+n = 20
+test_time = 10000
 accumulation_RI  = 0
 accumulation_ARI = 0
 

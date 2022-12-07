@@ -87,7 +87,7 @@ MathJax.Hub.Config({
 
 def main():
     global path_list
-    for path in tqdm(path_list, desc = "Converter Progress:"):
+    for path in tqdm(path_list, desc = "Converter Progress My Courses:"):
         converter(path)
 
 if __name__ == '__main__':

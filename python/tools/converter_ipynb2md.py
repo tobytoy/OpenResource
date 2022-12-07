@@ -280,7 +280,7 @@ MathJax.Hub.Config({
     
 
 def main():
-    for path in tqdm(path_list, desc = "Converter Progress:"):
+    for path in tqdm(path_list, desc = "Converter Progress Blog:"):
         converter(path)
 
 if __name__ == '__main__':

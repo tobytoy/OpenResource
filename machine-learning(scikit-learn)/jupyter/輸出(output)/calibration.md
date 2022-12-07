@@ -68,7 +68,7 @@ classifier_rfc = RandomForestClassifier().fit(X_train, y_train)
 # #############################################################################
 # Plot calibration plots
 
-plt.figure(figsize=(15, 15))
+plt.figure(figsize=(8, 8))
 ax1 = plt.subplot2grid((3, 1), (0, 0), rowspan=2)
 ax2 = plt.subplot2grid((3, 1), (2, 0))
 

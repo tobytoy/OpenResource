@@ -140,8 +140,8 @@ X = np.concatenate([X, random_state.randn(n_samples, 200 * n_features)], axis=1)
 X_train, X_test, y_train, y_test = train_test_split(X[y < 2], y[y < 2], test_size=0.5, random_state=random_state)
 
 
-classifier = LinearSVC(random_state=random_state).fit(X_train, y_train)
-# classifier = SVC(random_state=random_state, probability=True).fit(X_train, y_train)  # 改機率
+#classifier = LinearSVC(random_state=random_state).fit(X_train, y_train)
+classifier = SVC(random_state=random_state, probability=True).fit(X_train, y_train)  # 改機率
 
 # 如果用 from_estimator 要把模型也傳進去
 display_estimator = PrecisionRecallDisplay.from_estimator(
@@ -151,7 +151,7 @@ display_estimator.ax_.set_title("Precision-Recall Curve from Estimator")
 
 # 如果預測出結果可以用 from_predictions
 y_score = classifier.decision_function(X_test)
-# y_score = list(map(max, classifier.predict_proba(X_test)))   # 改機率
+y_score = list(map(max, classifier.predict_proba(X_test)))   # 改機率
 
 display_predictions = PrecisionRecallDisplay.from_predictions(
     y_test, y_score, name="LinearSVC", ax=ax_12
