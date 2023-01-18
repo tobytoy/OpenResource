@@ -172,6 +172,7 @@ path_dictionary['root'] = Path('../../machine-learning(scikit-learn)/jupyter/基
 path_dictionary['list'] = [
                 '07_01 Introduction_and_Kmeans.ipynb',
                 '07_02 other_method_simple.ipynb',
+                '07_03 affinity_propagation.ipynb',
                 ]
 path_dictionary_list.append(path_dictionary)
 

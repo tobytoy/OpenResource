@@ -62,7 +62,6 @@
 - metrices [回歸](%E8%A9%95%E5%83%B9%E6%8C%87%E6%A8%99(metrics)/metrics_regression_page)
 - metrices [分群](%E8%A9%95%E5%83%B9%E6%8C%87%E6%A8%99(metrics)/metrics_clustering_page)
 
-
 # 好鄰居
 
 - [KNN](%E5%9F%BA%E6%9C%AC%E6%A8%A1%E5%9E%8B(basic-model)/NearestNeighbors/06_01%20KNN_page)
@@ -75,15 +74,13 @@
 # 分群
 
 - [簡介](%E5%9F%BA%E6%9C%AC%E6%A8%A1%E5%9E%8B(basic-model)/Clustering/07_01%20Introduction_and_Kmeans_page)
+- [親合傳播](%E5%9F%BA%E6%9C%AC%E6%A8%A1%E5%9E%8B(basic-model)/Clustering/07_03%20affinity_propagation_page)
 
 # 降維
 
 - [PCA](%E5%9F%BA%E6%9C%AC%E6%A8%A1%E5%9E%8B(basic-model)/Decomposing/09_01%20PCA_page)
 
-
 # 輔助技巧
 
 - [Pipeline](%E8%BC%94%E5%8A%A9%E6%8A%80%E5%B7%A7(skills)/pipeline_page)
 - [Search](%E8%BC%94%E5%8A%A9%E6%8A%80%E5%B7%A7(skills)/search_page)
-
-
