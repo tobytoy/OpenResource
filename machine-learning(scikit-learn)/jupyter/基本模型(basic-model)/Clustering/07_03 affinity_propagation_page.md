@@ -175,6 +175,7 @@ $R^{(t)}$ 是第 $t$ 輪跌代的 Responsibility， $R^{(new)}$ 是預備第 $t+
 $$
 A^{(t+1)} = \alpha * A^{(t)} + (1-\alpha) * A^{(new)}
 $$
+
 ![damping update R](../../../images/scikit-learn_affinity_propagation_damping_update_A.png)
 
 Availability 是用相同的原理。
