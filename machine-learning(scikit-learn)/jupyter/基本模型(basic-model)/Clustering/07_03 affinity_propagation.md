@@ -144,8 +144,31 @@ $$
 k = \argmax_l \{A(i, l)+R(i, l) \}
 $$
 
-所以一算完 歸屬度（Availability）跟 吸引度（Responsibility），
+
+## 額外
+
+* 所以一算完 歸屬度（Availability）跟 吸引度（Responsibility），
 中心點就決定了，也就是說分幾群就決定好了，不用使用者事先輸入。
+
+* 另外再一提 ``damping`` 的作用，假設 $\alpha$ 為我們一開始提的參數 ``damping`` ，
+如果在跌代 歸屬度（Availability）跟 吸引度（Responsibility）的時候怕不收歛，會利用下面的方式
+
+$$
+R^{(t+1)} = \alpha * R^{(t)} + (1-\alpha) * R^{(new)}
+$$
+
+![damping update R](../../../images/scikit-learn_affinity_propagation_damping_update_R.png)
+
+$R^{(t)}$ 是第 $t$ 輪跌代的 Responsibility， $R^{(new)}$ 是預備第 $t+1$ 輪跌代的 Responsibility，
+但是怕不收歛所以用 $\alpha$ 去拉進它們的距離，再輸出當$t+1$ 輪跌代的 Responsibility。
+
+$$
+A^{(t+1)} = \alpha * A^{(t)} + (1-\alpha) * A^{(new)}
+$$
+![damping update R](../../../images/scikit-learn_affinity_propagation_damping_update_A.png)
+
+Availability 是用相同的原理。
+
 
 ## 優點
 
