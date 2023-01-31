@@ -3,16 +3,16 @@
 # Affinity Propagation
 
 今天要介紹分群的方法叫做 親合傳播 （ Affinity Propagation ）， 
-論文名稱叫做 [Clustering by Passing Messages Between Data Points](https://utstat.toronto.edu/reid/sta414/frey-affinity.pdf)，
+其概念引申自 [Clustering by Passing Messages Between Data Points](https://utstat.toronto.edu/reid/sta414/frey-affinity.pdf) 這篇論文，
 
 使用 Affinity Propagation 的好處是，
-我們不用設定要分幾類，演算法會自動決定有幾類，
-Affinity Propagation，會在兩點對之間互相傳遞親合度，
-跟現在的投票選里長有點類似，會經過多輪的投票，
-等到投票的結果收斂就會知道有幾類，
-所以模型裡面有個參數 ``damping`` 要設定，
-預設是 $0.5$ 介於 $[0.5, 1.0)$ 之間，參數目的是怕親合度傳遞的結果不收斂，
-在開始繼續講其原理細節之前，我們先來看看怎麼使用他，
+我們不用先設定好要分幾類，演算法會自動決定有幾種分類，
+Affinity Propagation 的運作方法，是會在任一對的兩點之間互相傳遞親合度，
+就像是在各點間經過多輪的投票，
+等到投票的結果收斂後就會知道有幾類，
+所以模型裡面有個參數 ``damping`` 要去設定，
+預設值是 $0.5$ ，範圍介於 $[0.5, 1.0)$ 之間，參數目的是怕親合度傳遞的結果不收斂，
+在開始繼續講其原理細節之前，我們先來看看實際上怎麼使用他，
 以鳶尾花資料集為例。
 
 
@@ -67,10 +67,10 @@ plt.show()
 
 
 
-鄰近傳播分群法（Affinity Propagation）是一種基於資料點間信息傳遞的分群算法。
-依據點間的相似度（Similarity）傳遞所需的消息，進而計算出各點的分群中心。
+親合傳播分群法（Affinity Propagation）是一種基於資料點之間的信息傳遞的分群算法。
+依據點間的相似度（Similarity）傳遞所需的訊息，進而計算出各點的分群中心。
 過程中所傳遞的信息分別是吸引度（Responsibility）和歸屬度（Availability）。
-透過不斷更新此兩種訊息，產生較好的分群中心（Exemplar）得以將資料及分群。
+透過不斷更新此兩種訊息，產生較好的分群中心（Exemplar）最後將會得到資料的分群結果。
 
 
 * 相似度（Similarity）
