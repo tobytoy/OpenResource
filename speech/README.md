@@ -5,7 +5,7 @@
 # 演講 List
 
 ## 東吳大學
-- 2023-04-29 : ChatGPT原理與實作, [PDF](files/Soochow-2023-04-28-V3(simple).pdf), [作品1](files/SoochowGraphicNovel-2023-04-28-V1.pdf), [作品2](files/SoochowGraphicNovel-2023-04-28-V2.pdf)
+- 2023-04-28 : ChatGPT原理與實作, [PDF](files/Soochow-2023-04-28-V3(simple).pdf), [作品1](files/SoochowGraphicNovel-2023-04-28-V1.pdf), [作品2](files/SoochowGraphicNovel-2023-04-28-V2.pdf)
 - 2022-04-20 : 深度學習在產品研發上的重要角色
 - 2021-12-29 : Introduction to human action recognition, [PDF](files/Soochow-2021-12-29.pdf)
 - 2018-11-13 : 漫談 AI, Machine Learning, Deep Learning, [PDF](files/Soochow-2018-11-13.pdf)
